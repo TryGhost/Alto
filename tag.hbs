@@ -1,0 +1,25 @@
+{{!< default}}
+
+<div class="content-area">
+  <main class="site-main">
+    {{#tag}}
+      <section class="tag kg-width-wide">
+        {{#if feature_image}}
+          <div class="tag-image-container u-placeholder">
+            <img class="tag-image lazyload u-object-fit" data-src="{{feature_image}}" alt={{name}}>
+          </div>
+        {{/if}}
+        <div class="tag-wrapper">
+          <h1 class="tag-name">{{name}}</h1>
+          <div class="tag-description">{{description}}</div>
+        </div>
+      </section>
+    {{/tag}}
+    <div class="post-feed kg-width-normal">
+      {{#foreach posts}}
+        {{> "loop"}}
+      {{/foreach}}
+    </div>
+    {{pagination}}
+  </main>
+</div>
