@@ -894,19 +894,20 @@ hr:after {
 .site-content {
   padding-top: 60px;
 }
-.tag {
-  align-items: center;
+.term {
   display: flex;
   margin-bottom: 60px;
+  max-width: 500px !important;
 }
-.tag-image-container {
+.term-image-container {
   border-radius: 50%;
+  flex-shrink: 0;
   height: 70px;
   margin-right: 20px;
   overflow: hidden;
   width: 70px;
 }
-.tag-name {
+.term-name {
   font-size: 20px;
   margin-bottom: 5px;
 }

@@ -2,19 +2,19 @@
 
 <div class="content-area">
   <main class="site-main">
-    {{#tag}}
+    {{#author}}
       <section class="term kg-width-wide">
-        {{#if feature_image}}
+        {{#if profile_image}}
           <div class="term-image-container u-placeholder">
-            <img class="term-image lazyload u-object-fit" data-src="{{feature_image}}" alt={{name}}>
+            <img class="term-image lazyload u-object-fit" data-src="{{profile_image}}" alt={{name}}>
           </div>
         {{/if}}
         <div class="term-wrapper">
           <h1 class="term-name">{{name}}</h1>
-          <div class="term-description">{{description}}</div>
+          <div class="term-description">{{bio}}</div>
         </div>
       </section>
-    {{/tag}}
+    {{/author}}
     <div class="post-feed kg-width-normal">
       {{#foreach posts}}
         {{> "loop"}}

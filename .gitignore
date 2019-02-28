@@ -3,3 +3,5 @@ Thumbs.db
 node_modules
 .vscode
 .editorconfig
+assets/css/screen.css
+assets/js/main.min.js
