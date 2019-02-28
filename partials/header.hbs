@@ -1,12 +1,13 @@
 <header class="site-header">
   <div class="navbar">
     <div class="navbar-left">
+      <div class="burger">Burger</div>
       {{#if @site.logo}}
         {{> logo}}
       {{/if}}
     </div>
     {{#if @site.navigation}}
-      <nav class="main-menu">
+      <nav class="main-menu hidden-xs hidden-sm hidden-md">
         {{navigation}}
       </nav>
     {{/if}}
