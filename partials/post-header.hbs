@@ -1,0 +1,28 @@
+<header class="post-header">
+  {{#if single}}
+    <h1 class="post-title">{{title}}</h1>
+  {{else}}
+    <h2 class="post-title">
+      <a class="post-title-link" href="{{url}}">{{title}}</a>
+    </h2>
+  {{/if}}
+  <div class="post-meta">
+    <span class="post-meta-item post-meta-date">
+      <time datetime="{{date format="YYYY-MM-DD"}}">
+        {{#unless number_date}}
+          {{date published_at timeago="true"}}
+        {{else}}
+          {{date published_at}}
+        {{/unless}}
+      </time>
+    </span>
+    <span class="post-meta-item post-meta-length">
+      {{reading_time}}
+    </span>
+    {{#if tags}}
+      <span class="post-meta-item post-meta-tags">
+        {{#foreach tags}}<a class="post-tag post-tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>{{/foreach}}
+      </span>
+    {{/if}}
+  </div>
+</header>

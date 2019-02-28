@@ -1,0 +1,54 @@
+@import "../variables.less";
+
+.dark-mode {
+  body {
+    background-color: @dark-mode-bg-color;
+    color: @dark-mode-primary-text-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a:not(.post-tag):not(.post-link):not(.author-name-link),
+  h1, h2, h3, h4, h5, h6,
+  figcaption,
+  .author-social-item:hover {
+    color: @white-color;
+  }
+
+  .logo-image:not(.white) {
+    opacity: 0;
+  }
+
+  .logo-image.white {
+    opacity: 1;
+  }
+
+  .post-meta,
+  .post-link.secondary,
+  .page-number,
+  .author-location,
+  .author-social-item {
+    color: @dark-mode-secondary-text-color;
+  }
+
+  .post-footer {
+    border-color: @dark-mode-border-color;
+  }
+
+  .comment-container,
+  .u-placeholder {
+    background-color: darken(@dark-mode-bg-color, 3%);
+  }
+
+  .u-sep .text {
+    background-color: @dark-mode-bg-color;
+  }
+
+  .u-sep:after {
+    background-color: @dark-mode-border-color;
+  }
+
+  .u-text-format ol li:before {
+    font-weight: 700;
+  }
+}

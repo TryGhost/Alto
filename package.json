@@ -1,0 +1,56 @@
+{
+  "name": "alto",
+  "description": "Blog theme",
+  "version": "1.0.0",
+  "engines": {
+    "ghost": ">=2.0.0",
+    "ghost-api": "v2"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Iveel",
+    "email": "hello@iveel.co",
+    "url": "https://iveel.co"
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme"
+  ],
+  "config": {
+    "posts_per_page": 5,
+    "image_sizes": {
+      "xxs": {
+        "width": 10
+      },
+      "xs": {
+        "width": 150
+      },
+      "s": {
+        "width": 300
+      },
+      "m": {
+        "width": 750
+      },
+      "l": {
+        "width": 960
+      },
+      "xl": {
+        "width": 1140
+      },
+      "xxl": {
+        "width": 1920
+      }
+    }
+  },
+  "scripts": {
+    "dev": "gulp",
+    "test": "gscan ."
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^4.0.1",
+    "gulp-uglify": "^3.0.1"
+  }
+}

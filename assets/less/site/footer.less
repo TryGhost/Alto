@@ -1,0 +1,36 @@
+@import "../variables.less";
+
+.site-footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1;
+  padding: 45px 0;
+}
+
+.copyright,
+.footer-social {
+  flex: 2;
+}
+
+.copyright {
+  font-size: 14px;
+
+  a {
+    position: relative;
+  }
+
+  a:after {
+    &:extend(.u-text-format a:after);
+  }
+}
+
+.footer-social {
+  margin-right: -5px;
+  text-align: right;
+}
+
+.footer-social-item {
+  color: @secondary-text-color;
+  padding: 0 3px;
+}

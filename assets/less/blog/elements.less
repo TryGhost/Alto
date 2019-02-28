@@ -1,0 +1,23 @@
+.kg-gallery-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.kg-gallery-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.kg-gallery-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+  margin: 10px 0 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+  margin: 0 0 0 10px;
+}

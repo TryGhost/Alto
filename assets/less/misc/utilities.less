@@ -1,0 +1,151 @@
+@import "../variables.less";
+
+.u-clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.u-plain-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.u-permalink {
+  bottom: 0;
+  left: 0;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 50;
+}
+
+.u-object-fit {
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+}
+
+.u-placeholder {
+  background-color: @light-gray-color;
+  position: relative;
+
+  &.same-height {
+    height: 0;
+    padding-bottom: 50%;
+  }
+}
+
+.u-sep {
+  align-items: center;
+  display: flex;
+  position: relative;
+
+  &:after {
+    background-color: @mid-gray-color;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .text {
+    background-color: @white-color;
+    padding-right: 10px;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.u-hover-item {
+  transition: opacity .3s @animation-base;
+}
+
+.u-hover-wrapper:hover .u-hover-item {
+  opacity: .5;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.u-text-format {
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 40px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 17px;
+  }
+
+  h5 {
+    font-size: 15px;
+  }
+
+  h6 {
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  strong {
+    color: @dark-gray-color;
+  }
+
+  a {
+    color: var(--primary-color);
+    position: relative;
+
+    &:after {
+      background-color: var(--primary-color);
+      bottom: -1px;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  ol {
+    counter-reset: numbered-list;
+    list-style-type: none;
+    padding-left: 30px;
+
+    li:before {
+      background-color: var(--primary-color);
+      border-radius: 50%;
+      color: @white-color;
+      content: counter(numbered-list);
+      counter-increment: numbered-list;
+      display: inline-block;
+      font-size: 13px;
+      height: 24px;
+      line-height: 24px;
+      margin-right: 10px;
+      text-align: center;
+      width: 24px;
+    }
+  }
+}

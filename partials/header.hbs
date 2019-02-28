@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="navbar">
+    <div class="navbar-left">
+      {{#if @site.logo}}
+        {{> logo}}
+      {{/if}}
+    </div>
+    {{#if @site.navigation}}
+      <nav class="main-menu">
+        {{navigation}}
+      </nav>
+    {{/if}}
+    <div class="navbar-right">
+      <div class="toggle-track">
+        <div class="toggle-moon"><i class="icon icon-brightness-2"></i></div>
+        <div class="toggle-sun"><i class="icon icon-white-balance-sunny"></i></div>
+        <div class="toggle-thumb"></div>
+      </div>
+    </div>
+  </div>
+</header>

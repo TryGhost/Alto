@@ -1,0 +1,59 @@
+@import "../variables.less";
+
+.author {
+  display: flex;
+
+  & + .author {
+    margin-top: 30px;
+  }
+}
+
+.author-image-placeholder {
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: 70px;
+  overflow: hidden;
+  width: 70px;
+}
+
+.author-wrapper {
+  margin-left: 20px;
+}
+
+.author-header {
+  align-items: center;
+  display: flex;
+}
+
+.author-name {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.author-name-link {
+  color: var(--primary-color);
+}
+
+.author-social {
+  display: flex;
+  line-height: 1;
+  margin-left: 10px;
+}
+
+.author-social-item {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  padding: 0 2px;
+}
+
+.author-location {
+  color: @secondary-text-color;
+  font-size: 14px;
+  margin-left: -2px;
+  margin-top: 5px;
+}
+
+.author-bio {
+  margin-top: 10px;
+}
