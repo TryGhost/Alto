@@ -11996,22 +11996,43 @@ body:not(.sidebar-right):not(.sidebar-left) .kg-width-full img {
   position: absolute;
   width: 100%;
 }
+.u-text-format ul,
 .u-text-format ol {
-  counter-reset: numbered-list;
   list-style-type: none;
-  padding-left: 30px;
+  padding-left: 32px;
+  position: relative;
 }
+.u-text-format ul li,
+.u-text-format ol li {
+  align-items: center;
+  display: flex;
+  line-height: 1.3;
+  margin: 15px 0;
+}
+.u-text-format ul li:before,
 .u-text-format ol li:before {
   background-color: var(--primary-color);
+  left: 0;
+  position: absolute;
+}
+.u-text-format ul li:before {
+  border-radius: 50%;
+  content: "";
+  height: 6px;
+  left: 13px;
+  width: 6px;
+}
+.u-text-format ol {
+  counter-reset: numbered-list;
+}
+.u-text-format ol li:before {
   border-radius: 50%;
   color: #fff;
   content: counter(numbered-list);
   counter-increment: numbered-list;
-  display: inline-block;
   font-size: 13px;
   height: 24px;
   line-height: 24px;
-  margin-right: 10px;
   text-align: center;
   width: 24px;
 }
