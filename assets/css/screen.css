@@ -1204,6 +1204,7 @@ html:not(.canvas-visible) .off-canvas {
   margin-right: 10px;
 }
 .share-item {
+  border-radius: 3px;
   color: #fff;
   font-size: 13px;
   height: 24px;
