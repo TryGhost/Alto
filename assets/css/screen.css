@@ -12043,7 +12043,7 @@ body:not(.sidebar-right):not(.sidebar-left) .kg-width-full img {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.dark-mode a:not(.post-tag):not(.post-link):not(.author-name-link),
+.dark-mode a:not(.post-tag):not(.post-link),
 .dark-mode h1,
 .dark-mode h2,
 .dark-mode h3,
