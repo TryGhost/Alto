@@ -3,6 +3,7 @@ var html = $('html');
 $(function () {
   darkMode();
   whiteLogo();
+  featured();
   gallery();
   comment();
   offCanvas();
@@ -27,6 +28,14 @@ function whiteLogo() {
     var whiteImage = '<img class="logo-image white" src="' + themeOptions.white_logo + '">';
     $('.logo').append(whiteImage);
   }
+}
+
+function featured() {
+  $('.featured-posts').owlCarousel({
+    dots: false,
+    items: 4,
+    margin: 30,
+  });
 }
 
 function gallery() {

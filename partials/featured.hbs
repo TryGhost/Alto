@@ -1,0 +1,12 @@
+{{#get "posts" filter="featured:true" limit="10" as |featured|}}
+  {{#if featured}}
+    <section class="featured-posts owl">
+      {{#foreach featured}}
+        <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
+          {{> post-media small_image=true}}
+          {{> post-header}}
+        </article>
+      {{/foreach}}
+    </section>
+  {{/if}}
+{{/get}}

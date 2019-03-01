@@ -22,6 +22,9 @@
     <div class="container">
       {{> header}}
       {{> cover}}
+      {{#is "home"}}
+        {{> featured}}
+      {{/is}}
       <div class="site-content">
         {{{body}}}
       </div>
