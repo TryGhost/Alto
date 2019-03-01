@@ -1,0 +1,28 @@
+@import "../variables.less";
+
+.burger {
+  cursor: pointer;
+  height: 30px;
+  margin-left: -9px;
+  margin-right: 10px;
+  position: relative;
+  width: 30px;
+
+  &:before,
+  &:after {
+    background-color: @dark-gray-color;
+    content: "";
+    height: 2px;
+    left: 9px;
+    position: absolute;
+    width: 12px;
+  }
+
+  &:before {
+    top: 11px;
+  }
+
+  &:after {
+    bottom: 11px;
+  }
+}

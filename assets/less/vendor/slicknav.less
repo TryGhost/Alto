@@ -1,47 +1,16 @@
 .slicknav_menu {
-  .slicknav_nav,
-  .sub-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
   .slicknav_nav {
-    background-color: @white-color;
     display: block !important;
-    margin-bottom: 30px;
+    list-style-type: none;
+    margin: 0 0 30px;
     padding: 0 20px;
     width: 100%;
   }
 
-  .menu-item > a {
-    align-items: center;
-    display: flex;
+  .menu-item-link {
+    display: block;
     font-size: 14px;
-    font-weight: 700;
-    line-height: 1;
     outline: none;
-    padding: 14px 0;
-
-    .emoji {
-      margin-left: 0 !important;
-      margin-right: 5px !important;
-    }
-  }
-
-  .menu-item-has-children > a {
-    justify-content: space-between;
-  }
-
-  .slicknav_item a {
-    display: inline;
-    outline: none;
-    padding: 0;
-  }
-
-  .slicknav_arrow {
-    color: @secondary-text-color;
-    font-size: 8px;
-    line-height: 0;
+    padding: 12px 0;
   }
 }
