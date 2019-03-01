@@ -11,12 +11,18 @@
   a:not(.post-tag):not(.post-link):not(.author-name-link),
   h1, h2, h3, h4, h5, h6,
   figcaption,
+  .canvas-close,
   .author-social-item:hover {
     color: @white-color;
   }
 
   .logo-image:not(.white) {
     opacity: 0;
+  }
+
+  .burger:before,
+  .burger:after {
+    background-color: @white-color;
   }
 
   .logo-image.white {
@@ -40,7 +46,8 @@
     background-color: darken(@dark-mode-bg-color, 3%);
   }
 
-  .u-sep .text {
+  .u-sep .text,
+  .off-canvas {
     background-color: @dark-mode-bg-color;
   }
 

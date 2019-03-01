@@ -12025,11 +12025,16 @@ body:not(.sidebar-right):not(.sidebar-left) .kg-width-full img {
 .dark-mode h5,
 .dark-mode h6,
 .dark-mode figcaption,
+.dark-mode .canvas-close,
 .dark-mode .author-social-item:hover {
   color: #fff;
 }
 .dark-mode .logo-image:not(.white) {
   opacity: 0;
+}
+.dark-mode .burger:before,
+.dark-mode .burger:after {
+  background-color: #fff;
 }
 .dark-mode .logo-image.white {
   opacity: 1;
@@ -12048,7 +12053,8 @@ body:not(.sidebar-right):not(.sidebar-left) .kg-width-full img {
 .dark-mode .u-placeholder {
   background-color: #21252c;
 }
-.dark-mode .u-sep .text {
+.dark-mode .u-sep .text,
+.dark-mode .off-canvas {
   background-color: #282c35;
 }
 .dark-mode .u-sep:after {
