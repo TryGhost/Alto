@@ -25,22 +25,55 @@
   display: flex;
 }
 
+.author-header-wrapper {
+  position: relative;
+}
+
 .author-name {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
   font-size: 16px;
   margin-bottom: 0;
+  position: relative;
+
+  &:after {
+    content: "\F35D";
+    font-family: Iveel;
+    font-size: 19px;
+    margin-left: 1px;
+  }
 }
 
 .author-social {
+  background-color: @dark-gray-color;
+  border-radius: 3px;
   display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  left: 100%;
   line-height: 1;
-  margin-left: 10px;
+  margin-left: -26px;
+  margin-top: 5px;
+  padding: 8px 0px;
+  position: absolute;
+  top: 100%;
+
+  &:before {
+    color: @dark-gray-color;
+    content: "\F360";
+    font-family: Iveel;
+    font-size: 19px;
+    left: 7px;
+    position: absolute;
+    top: -12px;
+  }
 }
 
 .author-social-item {
-  align-items: center;
-  display: flex;
-  font-size: 14px;
-  padding: 0 2px;
+  color: @white-color;
+  padding: 5px 11px;
+  white-space: nowrap;
 }
 
 .author-location {
