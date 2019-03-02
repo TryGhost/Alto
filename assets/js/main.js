@@ -31,10 +31,43 @@ function whiteLogo() {
 }
 
 function featured() {
-  $('.featured-posts').owlCarousel({
+  var featured = $('.featured-posts');
+  var postImage = featured.find('.post-image');
+  var imageHeight, nav;
+
+  function moveNav() {
+    imageHeight = postImage.height();
+    if (!nav) {
+      nav = featured.find('.owl-prev, .owl-next');
+    }
+    nav.css({
+      top: (imageHeight / 2) + 'px',
+      opacity: 1,
+    });
+  }
+
+  featured.owlCarousel({
     dots: false,
-    items: 4,
     margin: 30,
+    nav: true,
+    navText: ['<i class="icon icon-chevron-left"></i>', '<i class="icon icon-chevron-right"></i>'],
+    onInitialized: function () {
+      moveNav();
+    },
+    onResized: function () {
+      moveNav();
+    },
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 3,
+      },
+      992: {
+        items: 4,
+      },
+    },
   });
 }
 
