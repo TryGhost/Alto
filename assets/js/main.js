@@ -3,7 +3,7 @@ var html = $('html');
 $(function () {
   darkMode();
   whiteLogo();
-  featured();
+  carousel();
   gallery();
   comment();
   author();
@@ -31,15 +31,15 @@ function whiteLogo() {
   }
 }
 
-function featured() {
-  var featured = $('.featured-posts');
-  var postImage = featured.find('.post-image');
+function carousel() {
+  var carousel = $('.carousel');
+  var postImage = carousel.find('.post-image');
   var imageHeight, nav;
 
   function moveNav() {
     imageHeight = postImage.height();
     if (!nav) {
-      nav = featured.find('.owl-prev, .owl-next');
+      nav = carousel.find('.owl-prev, .owl-next');
     }
     nav.css({
       top: (imageHeight / 2) + 'px',
@@ -47,7 +47,7 @@ function featured() {
     });
   }
 
-  featured.owlCarousel({
+  carousel.owlCarousel({
     dots: false,
     margin: 30,
     nav: true,

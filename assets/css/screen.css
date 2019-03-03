@@ -1040,7 +1040,9 @@ html:not(.canvas-visible) .off-canvas {
   margin-top: 60px;
 }
 .error-post .post-media {
+  border-radius: 5px;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 .error-link {
   color: var(--primary-color) !important;
