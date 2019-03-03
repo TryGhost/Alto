@@ -37,7 +37,7 @@ function watch() {
 }
 
 function deploy(done) {
-  exec('rsync -avz --delete --rsync-path="sudo rsync" --exclude "node_modules" --exclude "gulpfile.js" --exclude "package.json" --exclude "package-lock.json" --exclude ".git" --exclude ".gitignore" --exclude ".DS_Store" ' + root + '/content/themes/' + theme + '/ aws:/home/ubuntu/ghost-themes/' + theme + '/content/themes/' + theme + '/', function (err, stdout, stderr) {
+  exec('rsync -avz --delete --rsync-path="sudo rsync" --exclude "node_modules" --exclude "gulpfile.js" --exclude "package-lock.json" --exclude ".git" --exclude ".gitignore" --exclude ".DS_Store" ' + root + '/content/themes/' + theme + '/ aws:/home/ubuntu/ghost-themes/' + theme + '/content/themes/' + theme + '/', function (err, stdout, stderr) {
     console.log(stdout);
   });
   done();
