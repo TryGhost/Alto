@@ -1,0 +1,42 @@
+{{!< default}}
+
+<div class="content-area">
+  <main class="site-main">
+    <div class="error">
+      <div class="error-code">{{code}}</div>
+      <div class="error-message">{{message}}</div>
+      {{#get "posts" limit="4" as |recents|}}
+        {{#if recents}}
+          <div class="error-posts">
+            <div class="row">
+              {{#foreach recents}}
+                <div class="error-column col-md-4">
+                  <article class="error-post {{post_class}}{{#unless feature_image}} no-image{{/unless}}">
+                    {{> post-media small_image=true}}
+                    {{> post-header}}
+                  </article>
+                </div>
+              {{/foreach}}
+            </div>
+          </div>
+        {{/if}}
+      {{/get}}
+      <a class="error-link" href="{{@site.url}}">Go to the front page <i class="icon icon-arrow-right"></i></a>
+    </div>
+  </main>
+</div>
+
+{{#contentFor "scripts"}}
+  <script>
+    $(function () {
+      var windowHeight = $(window).height();
+      var headerHeight = $('.site-header').outerHeight();
+      var footerHeight = $('.site-footer').outerHeight();
+      var content = $('.site-content');
+      var contentPadding = parseInt(content.css('padding-top')) + parseInt(content.css('padding-bottom'));
+      var errorHeight = windowHeight - headerHeight - footerHeight - contentPadding;
+
+      $('.error').css('min-height', errorHeight + 'px');
+    });
+  </script>
+{{/contentFor}}
