@@ -4,15 +4,15 @@
   <main class="site-main">
     <div class="error">
       <div class="error-code">{{code}}</div>
-      <div class="error-message">{{message}}</div>
+      <div class="error-message">{{message}}.</div>
       {{#get "posts" limit="4" as |recents|}}
         {{#if recents}}
           <div class="error-posts">
             <div class="row">
               {{#foreach recents}}
-                <div class="error-column col-md-4">
+                <div class="error-column col-md-3">
                   <article class="error-post {{post_class}}{{#unless feature_image}} no-image{{/unless}}">
-                    {{> post-media small_image=true}}
+                    {{> post-media small_image=true same_height=true ratio="square"}}
                     {{> post-header}}
                   </article>
                 </div>

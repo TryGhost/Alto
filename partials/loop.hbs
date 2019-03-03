@@ -1,6 +1,6 @@
 <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
-  {{> post-media}}
-  {{> post-header}}
+  {{> post-media same_height=true ratio="horizontal"}}
+  {{> post-header big_title=true}}
   {{#if excerpt}}
     <div class="post-excerpt">
       {{excerpt words="33"}}

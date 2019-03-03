@@ -4,7 +4,7 @@
   <main class="site-main kg-width-normal">
     {{#post}}
       <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single-post">
-        {{> post-header single=true number_date=true}}
+        {{> post-header single=true number_date=true big_title=true}}
         {{> post-media}}
         <div class="post-content u-text-format">
           {{content}}

@@ -334,7 +334,7 @@ h5,
 h6 {
   color: #1a1a1a;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.3;
   margin: 0 0 15px;
 }
 p {
@@ -1033,6 +1033,7 @@ html:not(.canvas-visible) .off-canvas {
   color: #1a1a1a;
   font-size: 40px;
   font-weight: 700;
+  letter-spacing: 2px;
   margin-bottom: -5px;
 }
 .error-posts {
@@ -1041,29 +1042,28 @@ html:not(.canvas-visible) .off-canvas {
 .error-post .post-media {
   margin-bottom: 30px;
 }
-.error-post .u-placeholder.same-height {
-  padding-bottom: 100%;
-}
-.error-post .post-title {
-  font-size: 18px;
-  line-height: 1.3;
-}
 .error-link {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 .post {
   margin-bottom: 75px;
 }
 .post-media {
+  margin-bottom: 20px;
+}
+.post-media.kg-width-wide {
   margin-bottom: 45px;
 }
 .post-header {
   margin-bottom: 15px;
 }
 .post-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.post-header.big-title .post-title {
   font-size: 28px;
   letter-spacing: -0.5px;
-  margin-bottom: 10px;
 }
 .post-title-link:hover {
   color: var(--primary-color);
@@ -1358,18 +1358,10 @@ html:not(.canvas-visible) .off-canvas {
 }
 .featured-posts .post-media {
   border-radius: 5px;
-  margin-bottom: 20px;
   overflow: hidden;
-}
-.featured-posts .u-placeholder.same-height {
-  padding-bottom: 100%;
 }
 .featured-posts .post-header {
   padding: 0 15px;
-}
-.featured-posts .post-title {
-  font-size: 16px;
-  letter-spacing: 0;
 }
 .related-posts {
   margin-top: 60px;
@@ -1377,18 +1369,10 @@ html:not(.canvas-visible) .off-canvas {
 .related-posts .post {
   margin-bottom: 0;
 }
-.related-posts .post-media {
-  margin-bottom: 20px;
-}
-.related-posts .u-placeholder.same-height {
-  padding-bottom: 62.5%;
-}
 .related-posts .post-header {
   text-align: center;
 }
 .related-posts .post-title {
-  font-size: 16px;
-  letter-spacing: 0;
   margin-bottom: 5px;
 }
 .related-posts .post-meta-length,
@@ -12150,7 +12134,15 @@ body:not(.sidebar-right):not(.sidebar-left) .kg-width-full img {
 }
 .u-placeholder.same-height {
   height: 0;
+}
+.u-placeholder.horizontal {
   padding-bottom: 50%;
+}
+.u-placeholder.rectangle {
+  padding-bottom: 62.5%;
+}
+.u-placeholder.square {
+  padding-bottom: 100%;
 }
 .u-sep {
   align-items: center;
@@ -12280,7 +12272,8 @@ body:not(.sidebar-right):not(.sidebar-left) .kg-width-full img {
 .dark-mode figcaption,
 .dark-mode .logo-text,
 .dark-mode .canvas-close,
-.dark-mode .author-social-item:hover {
+.dark-mode .author-social-item:hover,
+.dark-mode .error-code {
   color: #fff;
 }
 .dark-mode .logo-image:not(.white) {

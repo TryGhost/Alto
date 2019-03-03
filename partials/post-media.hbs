@@ -1,6 +1,6 @@
 {{#if feature_image}}
   <div class="post-media{{#unless small_image}} kg-width-wide{{/unless}}">
-    <div class="u-placeholder same-height">
+    <div class="u-placeholder{{#if same_height}} same-height {{ratio}}{{/if}}">
       <a class="post-image-link" href="{{url}}">
         <img class="post-image lazyload u-object-fit"
           data-srcset="{{img_url feature_image size="s"}} 300w, {{img_url feature_image size="m"}} 750w, {{img_url feature_image size="l"}} 960w"

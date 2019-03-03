@@ -3,7 +3,7 @@
     <section class="featured-posts owl">
       {{#foreach featured}}
         <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
-          {{> post-media small_image=true}}
+          {{> post-media small_image=true same_height=true ratio="square"}}
           {{> post-header}}
         </article>
       {{/foreach}}
