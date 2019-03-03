@@ -21,18 +21,3 @@
     </div>
   </main>
 </div>
-
-{{#contentFor "scripts"}}
-  <script>
-    $(function () {
-      var windowHeight = $(window).height();
-      var headerHeight = $('.site-header').outerHeight();
-      var footerHeight = $('.site-footer').outerHeight();
-      var content = $('.site-content');
-      var contentPadding = parseInt(content.css('padding-top')) + parseInt(content.css('padding-bottom'));
-      var errorHeight = windowHeight - headerHeight - footerHeight - contentPadding;
-
-      $('.error').css('min-height', errorHeight + 'px');
-    });
-  </script>
-{{/contentFor}}
