@@ -55,9 +55,13 @@
   line-height: 1;
   margin-left: -26px;
   margin-top: 5px;
+  opacity: 0;
   padding: 8px 0px;
+  pointer-events: none;
   position: absolute;
   top: 100%;
+  transform: translateY(5px);
+  transition: opacity .2s @animation-base, transform .2s @animation-base;
 
   &:before {
     color: @dark-gray-color;
@@ -67,6 +71,12 @@
     left: 7px;
     position: absolute;
     top: -12px;
+  }
+
+  &.enabled {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
   }
 }
 

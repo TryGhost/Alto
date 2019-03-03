@@ -6,6 +6,7 @@ $(function () {
   featured();
   gallery();
   comment();
+  author();
   offCanvas();
   copyright();
   social();
@@ -86,6 +87,12 @@ function comment() {
   if (themeOptions.disqus_shortname == '') {
     $('.comment-container').remove();
   }
+}
+
+function author() {
+  $('.author-name').on('click', function () {
+    $(this).next('.author-social').toggleClass('enabled');
+  });
 }
 
 function offCanvas() {
