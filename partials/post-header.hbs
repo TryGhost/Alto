@@ -6,7 +6,7 @@
       <a class="post-title-link" href="{{url}}">{{title}}</a>
     </h2>
   {{/if}}
-  {{#is "post"}}
+  {{^is "page"}}
     <div class="post-meta">
       <span class="post-meta-item post-meta-date">
         <time datetime="{{date format="YYYY-MM-DD"}}">
