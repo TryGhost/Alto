@@ -967,6 +967,7 @@ hr:after {
   font-size: 16px;
   -webkit-justify-content: center;
   justify-content: center;
+  margin-top: 1px;
   width: 50%;
 }
 .toggle-moon {
