@@ -1300,6 +1300,14 @@ html:not(.canvas-visible) .off-canvas {
   color: #bebebe;
   content: ", ";
 }
+@media (max-width: 767px) {
+  .post-media.kg-width-wide {
+    margin-bottom: 30px;
+  }
+  .post:not(.single-post) .post-title {
+    font-size: 20px !important;
+  }
+}
 .pagination {
   -webkit-align-items: center;
   align-items: center;
@@ -2042,6 +2050,11 @@ body:not(.sidebar-right):not(.sidebar-left) .kg-width-full img {
   line-height: 24px;
   text-align: center;
   width: 24px;
+}
+@media (max-width: 767px) {
+  .u-placeholder.horizontal {
+    padding-bottom: 62.5%;
+  }
 }
 .dark-mode body {
   background-color: #282c35;
