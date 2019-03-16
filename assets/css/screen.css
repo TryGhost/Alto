@@ -1422,7 +1422,10 @@ html:not(.canvas-visible) .off-canvas {
   width: 70px;
 }
 .author-wrapper {
+  background-color: #f1f1f1;
+  border-radius: 5px;
   margin-left: 20px;
+  padding: 20px 25px;
 }
 .author-header {
   -webkit-align-items: center;
@@ -1503,7 +1506,8 @@ html:not(.canvas-visible) .off-canvas {
   top: 1px;
 }
 .author-bio {
-  margin-top: 10px;
+  font-size: 15px;
+  margin-top: 6px;
 }
 .navigation {
   display: -webkit-flex;
@@ -2079,6 +2083,7 @@ body:not(.sidebar-right):not(.sidebar-left) .kg-width-full img {
 .dark-mode .post-footer {
   border-color: #495061;
 }
+.dark-mode .author-wrapper,
 .dark-mode .comment-container,
 .dark-mode .u-placeholder {
   background-color: #21252c;
