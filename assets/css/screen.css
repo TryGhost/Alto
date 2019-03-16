@@ -1922,6 +1922,7 @@ body:not(.sidebar-right):not(.sidebar-left) .kg-width-full img {
 .u-placeholder {
   background-color: #f1f1f1;
   position: relative;
+  z-index: 10;
 }
 .u-placeholder.same-height {
   height: 0;
