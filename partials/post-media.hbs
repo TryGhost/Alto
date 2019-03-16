@@ -3,8 +3,12 @@
     <div class="u-placeholder{{#if same_height}} same-height {{ratio}}{{/if}}">
       <a class="post-image-link" href="{{url}}">
         <img class="post-image lazyload u-object-fit"
-          data-srcset="{{img_url feature_image size="s"}} 300w, {{img_url feature_image size="m"}} 750w, {{img_url feature_image size="l"}} 960w"
-          src="{{img_url feature_image size="xxs"}}"
+          {{#if static_image}}
+            src="{{img_url feature_image size="m"}}"
+          {{else}}
+            data-srcset="{{img_url feature_image size="s"}} 400w, {{img_url feature_image size="m"}} 750w, {{img_url feature_image size="l"}} 960w"
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+          {{/if}}
           data-sizes="auto"
           alt="{{title}}"
         >

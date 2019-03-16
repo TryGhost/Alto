@@ -20,14 +20,11 @@
   "config": {
     "posts_per_page": 5,
     "image_sizes": {
-      "xxs": {
-        "width": 10
-      },
       "xs": {
         "width": 150
       },
       "s": {
-        "width": 300
+        "width": 400
       },
       "m": {
         "width": 750
@@ -52,6 +49,7 @@
     "gulp-autoprefixer": "^6.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-less": "^4.0.1",
+    "gulp-touch-fd": "github:funkedigital/gulp-touch-fd",
     "gulp-uglify": "^3.0.1"
   }
 }

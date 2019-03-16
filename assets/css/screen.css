@@ -839,17 +839,20 @@ hr:after {
     display: none !important;
   }
 }
-.button {
-  background-color: #1a1a1a;
-  color: #fff;
+.button-arrow-icon {
   display: inline-block;
-  font-size: 10px;
-  letter-spacing: 0.5px;
-  line-height: 1;
-  outline: none;
-  padding: 13px 25px 12px;
-  text-align: center;
-  text-transform: uppercase;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  vertical-align: middle;
+}
+.button-arrow-right:hover .button-arrow-icon {
+  -webkit-transform: translateX(5px);
+  transform: translateX(5px);
+}
+.button-arrow-left:hover .button-arrow-icon {
+  -webkit-transform: translateX(-5px);
+  transform: translateX(-5px);
 }
 .site-header {
   -webkit-backface-visibility: hidden;
@@ -1024,7 +1027,7 @@ hr:after {
   display: -webkit-flex;
   display: flex;
   margin-bottom: 60px;
-  max-width: 500px !important;
+  max-width: 550px !important;
 }
 .term-image-container {
   border-radius: 50%;
@@ -1037,7 +1040,10 @@ hr:after {
 }
 .term-name {
   font-size: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+}
+.term-description {
+  line-height: 1.5;
 }
 .dimmer {
   background: rgba(0, 0, 0, 0.7);
@@ -1116,7 +1122,7 @@ html:not(.canvas-visible) .off-canvas {
 }
 .footer-social-item {
   color: #bebebe;
-  padding: 0 3px;
+  padding: 0 4px;
 }
 @media (max-width: 767px) {
   .site-footer {
@@ -1484,10 +1490,31 @@ html:not(.canvas-visible) .off-canvas {
   color: #bebebe;
   font-size: 14px;
   margin-left: -2px;
-  margin-top: 5px;
+  margin-top: 2px;
+}
+.author-location-icon {
+  position: relative;
+  top: 1px;
 }
 .author-bio {
   margin-top: 10px;
+}
+.navigation {
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 30px;
+}
+.navigation-item {
+  -webkit-flex: 1;
+  flex: 1;
+}
+.navigation-item-link {
+  font-size: 17px;
+  font-weight: 700;
+}
+.navigation-next {
+  margin-left: 30px;
+  text-align: right;
 }
 .featured-posts {
   margin: 30px 0;
@@ -1636,18 +1663,7 @@ html:not(.canvas-visible) .off-canvas {
 }
 .lazyloaded {
   opacity: 1;
-  transition: opacity 1.5s ease-in-out;
-}
-.blur-up {
-  -webkit-filter: blur(30px);
-  filter: blur(30px);
-  transition: -webkit-filter 0.4s ease-in-out;
-  transition: filter 0.4s ease-in-out;
-  transition: filter 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
-}
-.blur-up.lazyloaded {
-  -webkit-filter: blur(0);
-  filter: blur(0);
+  transition: opacity 1s ease-in-out;
 }
 .slicknav_menu .slicknav_nav {
   display: block !important;
@@ -1722,7 +1738,7 @@ html:not(.canvas-visible) .off-canvas {
   background-color: #fff;
   border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   color: #1a1a1a;
   font-size: 21px;
   height: 40px;

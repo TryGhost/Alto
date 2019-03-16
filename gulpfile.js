@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const {src, dest, series} = gulp;
+const touch = require('gulp-touch-fd');
 const less = require('gulp-less');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
@@ -19,7 +20,8 @@ function css() {
       browsers: ['>0.25%'],
       cascade: false,
     }))
-    .pipe(dest('assets/css'));
+    .pipe(dest('assets/css'))
+    .pipe(touch());
 }
 
 function js() {
@@ -28,7 +30,8 @@ function js() {
     'assets/js/main.js'])
     .pipe(uglify())
     .pipe(concat('main.min.js'))
-    .pipe(dest('assets/js'));
+    .pipe(dest('assets/js'))
+    .pipe(touch());
 }
 
 function watch() {
