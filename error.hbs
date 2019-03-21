@@ -10,8 +10,8 @@
           <div class="error-posts carousel owl">
             {{#foreach recents}}
               <article class="error-post {{post_class}}{{#unless feature_image}} no-image{{/unless}}">
-                {{> post-media small_image=true same_height=true ratio="square"}}
-                {{> post-header}}
+                {{> post-media static_image=true small_image=true same_height=true ratio="square" show_tag=true}}
+                {{> post-header hide_meta=true}}
               </article>
             {{/foreach}}
           </div>

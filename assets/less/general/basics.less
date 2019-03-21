@@ -18,6 +18,8 @@ body {
   text-rendering: optimizeLegibility;
   transition: background-color .3s @animation-base;
   word-break: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -48,10 +50,12 @@ img {
 }
 
 blockquote {
+  border-left: 4px solid @dark-gray-color;
   color: @dark-gray-color;
   font-size: 20px;
-  line-height: 1.5;
-  margin: 30px 0 30px 45px;
+  line-height: 1.4;
+  margin: 30px 0;
+  padding: 10px 0 10px 20px;
 }
 
 ul, ol {

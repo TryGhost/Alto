@@ -49,7 +49,7 @@ function carousel() {
 
   carousel.owlCarousel({
     dots: false,
-    margin: 30,
+    margin: 20,
     nav: true,
     navText: ['<i class="icon icon-chevron-left"></i>', '<i class="icon icon-chevron-right"></i>'],
     onInitialized: function () {
