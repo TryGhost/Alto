@@ -1446,9 +1446,8 @@ html:not(.canvas-visible) .off-canvas {
   width: 70px;
 }
 .author-wrapper {
-  background-color: #f1f1f1;
-  margin-left: 20px;
-  padding: 25px 27px;
+  margin-left: 30px;
+  max-width: 550px;
 }
 .author-header {
   -webkit-align-items: center;
@@ -2111,7 +2110,6 @@ body:not(.sidebar-right):not(.sidebar-left) .kg-width-full img {
 .dark-mode .post-footer {
   border-color: #495061;
 }
-.dark-mode .author-wrapper,
 .dark-mode .comment-container,
 .dark-mode .u-placeholder {
   background-color: #21252c;
