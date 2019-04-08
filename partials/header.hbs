@@ -4,12 +4,12 @@
       <div class="burger hidden-lg hidden-xl"></div>
       {{> logo}}
     </div>
-    {{#if @site.navigation}}
-      <nav class="main-menu hidden-xs hidden-sm hidden-md">
-        {{navigation}}
-      </nav>
-    {{/if}}
     <div class="navbar-right">
+      {{#if @site.navigation}}
+        <nav class="main-menu hidden-xs hidden-sm hidden-md">
+          {{navigation}}
+        </nav>
+      {{/if}}
       <div class="toggle-track">
         <div class="toggle-moon"><i class="icon icon-brightness-2"></i></div>
         <div class="toggle-sun"><i class="icon icon-white-balance-sunny"></i></div>
