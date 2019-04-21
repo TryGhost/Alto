@@ -8,10 +8,10 @@ const concat = require('gulp-concat');
 const exec = require('child_process').exec;
 
 const theme = 'alto';
-const current = '0.9';
-const next = '1.0';
+const current = '0.9.0';
+const next = '1.0.0';
 const root = '/Users/sodbileg/Developer/ghost-themes';
-const final = '/Users/sodbileg/Dropbox/iveel.co/alto';
+const final = '/Users/sodbileg/Dropbox/IVEEL/Alto';
 
 function css() {
   return src('assets/less/screen.less')
@@ -46,5 +46,19 @@ function deploy(done) {
   done();
 }
 
+function prepare(done) {
+  exec(
+    'rsync -avz --delete --exclude "assets/js/vendor" --exclude "assets/js/main.js" --exclude "assets/less" --exclude ".git" --exclude ".gitignore" --exclude "node_modules" --exclude "gulpfile.js" --exclude "package.json" --exclude "package-lock.json" ' + root + '/content/themes/' + theme + '/ ' + final + '/' + theme + '/ && ' +
+    'cd ' + final + ' && ' +
+    'zip -r -X ' + theme + '.zip ' + theme + ' -x "*.DS_Store" -x "*.gitignore" -x "*.travis.yml" -x "*.tx" -x "*.git" -x "*.svn" && ' +
+    'cp ' + theme + '.zip ' + theme + '-*/upload && ' +
+    'cp -r ' + theme + '-' + current + ' ' + theme + '-' + next + ' && ' +
+    'zip -r -X ' + theme + '-' + next + '.zip ' + theme + '-' + next + ' -x "*.DS_Store" -x "*.gitignore" -x "*.travis.yml" -x "*.tx" -x "*.git" -x "*.svn" && ' +
+    'rm ' + theme + '.zip ' + '&& rm -r ' + theme + '&& rm -r ' + theme + '-' + current
+  );
+  done();
+}
+
 exports.default = series(css, js, watch);
 exports.deploy = deploy;
+exports.prepare = prepare;
