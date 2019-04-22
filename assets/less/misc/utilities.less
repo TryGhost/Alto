@@ -55,28 +55,6 @@
   }
 }
 
-.u-sep {
-  align-items: center;
-  display: flex;
-  position: relative;
-
-  &:after {
-    background-color: @mid-gray-color;
-    content: "";
-    height: 1px;
-    left: 0;
-    position: absolute;
-    width: 100%;
-  }
-
-  .text {
-    background-color: @white-color;
-    padding-right: 10px;
-    position: relative;
-    z-index: 10;
-  }
-}
-
 .u-hover-item {
   transition: opacity .3s @animation-base;
 }
@@ -91,6 +69,7 @@
 
 .u-text-format {
   h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
     margin-top: 40px;
   }
 
@@ -108,14 +87,17 @@
 
   h4 {
     font-size: 17px;
+    font-weight: 700;
   }
 
   h5 {
     font-size: 15px;
+    font-weight: 700;
   }
 
   h6 {
     font-size: 13px;
+    font-weight: 700;
     text-transform: uppercase;
   }
 
@@ -174,7 +156,7 @@
       content: counter(numbered-list);
       counter-increment: numbered-list;
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
       height: 24px;
       line-height: 24px;
       text-align: center;

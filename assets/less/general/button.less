@@ -1,13 +1,24 @@
 .button-arrow-icon {
+  color: @secondary-text-color;
   display: inline-block;
   transition: transform .2s @animation-base;
   vertical-align: middle;
 }
 
-.button-arrow-right:hover .button-arrow-icon {
-  transform: translateX(5px);
+.button-arrow-left .button-arrow-icon {
+  margin-left: -2px;
+  margin-right: 3px;
+}
+
+.button-arrow-right .button-arrow-icon {
+  margin-left: 3px;
+  margin-right: -2px;
 }
 
 .button-arrow-left:hover .button-arrow-icon {
   transform: translateX(-5px);
+}
+
+.button-arrow-right:hover .button-arrow-icon {
+  transform: translateX(5px);
 }

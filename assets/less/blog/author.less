@@ -1,5 +1,6 @@
 .author {
   display: flex;
+  margin-top: 60px;
 
   & + .author {
     margin-top: 30px;
@@ -15,7 +16,7 @@
 }
 
 .author-wrapper {
-  margin-left: 30px;
+  margin-left: 25px;
   max-width: 550px;
 }
 
@@ -32,7 +33,8 @@
   align-items: center;
   cursor: pointer;
   display: flex;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 800;
   margin-bottom: 0;
   position: relative;
 
@@ -86,14 +88,6 @@
   white-space: nowrap;
 }
 
-.author-location {
-  color: @secondary-text-color;
-  font-size: 13px;
-  font-weight: 700;
-  margin-left: -2px;
-  margin-top: 2px;
-}
-
 .author-location-icon {
   position: relative;
   top: 1px;
@@ -102,4 +96,14 @@
 .author-bio {
   font-size: 15px;
   margin-top: 8px;
+}
+
+.author-location {
+  color: @secondary-text-color;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  margin-left: -2px;
+  margin-top: 12px;
+  text-transform: uppercase;
 }

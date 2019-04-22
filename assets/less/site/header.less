@@ -10,18 +10,19 @@
   justify-content: space-between;
 }
 
-.navbar-left {
-  align-items: center;
-  display: flex;
-}
-
+.navbar-left,
 .navbar-right {
   align-items: center;
   display: flex;
 }
 
+.navbar-left {
+  height: 100%;
+}
+
 .logo {
   display: inline-block;
+  margin-right: 15px;
   position: relative;
   vertical-align: middle;
 }
@@ -43,6 +44,22 @@
   font-weight: 800;
 }
 
+.sep {
+  display: flex;
+  height: 100%;
+  margin: 0 15px;
+  width: 1px;
+
+  &:after {
+    background-color: @mid-gray-color;
+    content: "";
+    height: 40%;
+    margin: auto;
+    transition: background-color .5s @animation-base;
+    width: 100%;
+  }
+}
+
 .nav-list {
   display: flex;
 }
@@ -50,10 +67,18 @@
 .menu-item {
   backface-visibility: hidden;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: .5px;
   line-height: 1;
   margin: 0 20px;
   text-transform: uppercase;
   transition: opacity .3s @animation-base;
+}
+
+.menu-item-link {
+  color: @secondary-text-color;
+
+  &:hover {
+    color: @dark-gray-color;
+  }
 }
