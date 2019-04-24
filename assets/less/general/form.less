@@ -1,0 +1,21 @@
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  border: 1px solid @mid-gray-color;
+  font-size: 16px;
+  height: 50px;
+  outline: none;
+  padding: 0 15px;
+
+  &:focus {
+    border-color: var(--primary-color);
+  }
+}
+
+// @media (max-width: 1024) and (-webkit-min-device-pixel-ratio: 2) {
+//   input[type="text"],
+//   input[type="password"],
+//   input[type="email"] {
+//     font-size: 16px;
+//   }
+// }
