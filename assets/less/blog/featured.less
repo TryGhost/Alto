@@ -1,7 +1,20 @@
 .featured-posts {
   margin: 45px 0;
 
+  .owl-item {
+    &:extend(.u-hover-item);
+  }
+
+  .owl-stage:hover .owl-item {
+    &:extend(.u-hover-wrapper:hover .u-hover-item all);
+  }
+
   .post {
+    margin-bottom: 0;
+  }
+
+  .post-header,
+  .post-title {
     margin-bottom: 0;
   }
 
