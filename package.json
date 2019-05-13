@@ -6,7 +6,6 @@
     "ghost": ">=2.0.0",
     "ghost-api": "v2"
   },
-  "license": "MIT",
   "author": {
     "name": "Iveel",
     "email": "hello@iveel.co",

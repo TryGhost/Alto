@@ -48,7 +48,7 @@ function deploy(done) {
 
 function prepare(done) {
   exec(
-    'rsync -avz --delete --exclude "assets/js/vendor" --exclude "assets/js/main.js" --exclude "assets/less" --exclude ".git" --exclude ".gitignore" --exclude "node_modules" --exclude "gulpfile.js" --exclude "package.json" --exclude "package-lock.json" ' + root + '/content/themes/' + theme + '/ ' + final + '/' + theme + '/ && ' +
+    'rsync -avz --delete --exclude "assets/js/vendor" --exclude "assets/js/main.js" --exclude "assets/less" --exclude ".git" --exclude ".gitignore" --exclude "node_modules" --exclude "gulpfile.js" --exclude "package-lock.json" ' + root + '/content/themes/' + theme + '/ ' + final + '/' + theme + '/ && ' +
     'cd ' + final + ' && ' +
     'zip -r -X ' + theme + '.zip ' + theme + ' -x "*.DS_Store" -x "*.gitignore" -x "*.travis.yml" -x "*.tx" -x "*.git" -x "*.svn" && ' +
     'cp ' + theme + '.zip ' + theme + '-*/upload && ' +
