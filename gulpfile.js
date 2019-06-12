@@ -54,7 +54,6 @@ function prepare(done) {
     'cp ' + theme + '.zip ' + theme + '-*/upload && ' +
     'cp -r ' + theme + '-' + current + ' ' + theme + '-' + next + ' && ' +
     'zip -r -X ' + theme + '-' + next + '.zip ' + theme + '-' + next + ' -x "*.DS_Store" -x "*.gitignore" -x "*.travis.yml" -x "*.tx" -x "*.git" -x "*.svn" && ' +
-    'zip -r -X ' + 'preview.zip ' + 'preview -x "*.DS_Store" -x "*.gitignore" -x "*.travis.yml" -x "*.tx" -x "*.git" -x "*.svn" && ' +
     'rm ' + theme + '.zip ' + '&& rm -r ' + theme + '&& rm -r ' + theme + '-' + current
   );
   done();
