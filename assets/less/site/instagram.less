@@ -1,0 +1,38 @@
+.instagram-feed {
+  display: flex;
+  margin-top: 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+.instagram-feed-item {
+  flex-shrink: 0;
+  width: calc(~"100% / 6");
+}
+
+.instagram-feed-username {
+  align-items: center;
+  background-color: @white-color;
+  bottom: 15px;
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  left: 15px;
+  line-height: 1;
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 10;
+}
+
+.instagram-feed-icon {
+  font-size: 20px;
+  margin-right: 5px;
+  position: relative;
+  top: 1px;
+}
+
+@media (max-width: 767px) {
+  .instagram-feed-item {
+    width: calc(~"100% / 3");
+  }
+}

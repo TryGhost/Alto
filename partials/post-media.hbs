@@ -1,6 +1,6 @@
 {{#if feature_image}}
   <div class="post-media{{#unless small_image}} kg-width-wide{{/unless}}">
-    <div class="u-placeholder{{#if same_height}} same-height {{ratio}}{{/if}}">
+    <div class="u-placeholder{{#if ratio}} {{ratio}}{{/if}}">
       {{#if show_tag}}
         {{#if primary_tag}}
           <a class="post-media-tag post-tag-{{primary_tag.slug}}" href="{{primary_tag.url}}" title="{{primary_tag.name}}">{{primary_tag.name}}</a>

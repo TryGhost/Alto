@@ -7,6 +7,7 @@ $(function () {
   gallery();
   comment();
   author();
+  loadInstagram();
   offCanvas();
   copyright();
   social();
@@ -93,6 +94,58 @@ function author() {
   $('.author-name').on('click', function () {
     $(this).next('.author-social').toggleClass('enabled');
   });
+}
+
+function loadInstagram() {
+  'use strict';
+  var photos;
+  var feed = $('.instagram-feed');
+
+  if (themeOptions.instagram_token != '') {
+    if ( localStorage.getItem('instagram') !== null && (Math.floor(Date.now() / 1000) - JSON.parse(localStorage.getItem('instagram')).timestamp) < 300) {
+			photos = JSON.parse(localStorage.getItem('instagram')).photos;
+			outputInstagram(photos, feed);
+		} else {
+      $.ajax({
+        url: 'https://api.instagram.com/v1/users/self/media/recent/',
+        dataType: 'jsonp',
+        type: 'GET',
+        data: {access_token: themeOptions.instagram_token, count: 6},
+        success: function (result) {
+          photos = result.data;
+		    	var cache = {
+		    		photos: photos,
+		    		timestamp: Math.floor(Date.now() / 1000)
+		    	};
+		    	localStorage.setItem('instagram', JSON.stringify(cache));
+		    	outputInstagram(photos, feed);
+        }
+      } );
+		}
+  } else {
+    feed.remove();
+  }
+}
+
+function outputInstagram(photos, feed) {
+  'use strict';
+  var photo;
+	var output = '';
+
+	for (var index in photos) {
+		photo = photos[index];
+    output += '<div class="instagram-feed-item u-hover-item u-placeholder square">' +
+      '<a href="' + photo.link + '" target="_blank">' +
+        '<img class="lazyload u-object-fit" data-src="' + photo.images.standard_resolution.url + '" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">' +
+      '</a>' +
+    '</div>';
+  }
+
+  if (themeOptions.instagram_username != '') {
+    output += '<a class="instagram-feed-username" href="https://www.instagram.com/' + themeOptions.instagram_username + '" target="_blank"><i class="instagram-feed-icon icon icon-instagram"></i> ' + themeOptions.instagram_username + '</a>';
+  }
+  
+  feed.html(output);
 }
 
 function offCanvas() {

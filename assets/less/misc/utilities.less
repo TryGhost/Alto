@@ -28,8 +28,10 @@
 
 .u-object-fit {
   height: 100%;
+  left: 0;
   object-fit: cover;
   position: absolute;
+  top: 0;
   width: 100%;
 }
 
@@ -38,19 +40,20 @@
   position: relative;
   z-index: 10;
 
-  &.same-height {
-    height: 0;
+  &:before {
+    content: "";
+    display: block;
   }
 
-  &.horizontal {
+  &.horizontal:before {
     padding-bottom: 50%;
   }
 
-  &.rectangle {
+  &.rectangle:before {
     padding-bottom: 62.5%;
   }
 
-  &.square {
+  &.square:before {
     padding-bottom: 100%;
   }
 }
@@ -60,7 +63,7 @@
 }
 
 .u-hover-wrapper:hover .u-hover-item {
-  opacity: .5;
+  opacity: .7;
 
   &:hover {
     opacity: 1;

@@ -3,7 +3,7 @@
     <div class="featured-posts carousel owl">
       {{#foreach featured}}
         <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
-          {{> post-media static_image=true small_image=true same_height=true ratio="square" show_tag=true}}
+          {{> post-media static_image=true small_image=true ratio="square" show_tag=true}}
           {{> post-header hide_meta=true}}
         </article>
       {{/foreach}}
