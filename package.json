@@ -1,7 +1,7 @@
 {
   "name": "alto",
   "description": "Blog theme",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "engines": {
     "ghost": ">=2.0.0",
     "ghost-api": "v2"

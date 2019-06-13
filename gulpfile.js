@@ -8,8 +8,8 @@ const concat = require('gulp-concat');
 const exec = require('child_process').exec;
 
 const theme = 'alto';
-const current = '1.0.0';
-const next = '1.1.0';
+const current = '1.1.0';
+const next = '1.1.1';
 const root = '/Users/sodbileg/Developer/ghost-themes';
 const final = '/Users/sodbileg/Dropbox/IVEEL/Alto';
 
