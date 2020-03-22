@@ -17,10 +17,10 @@ function darkMode() {
   $('.toggle-track').on('click', function() {
     if (html.hasClass('dark-mode')) {
       html.removeClass('dark-mode');
-      localStorage.setItem('dark_mode', false);
+      localStorage.setItem('alto_dark', false);
     } else {
       html.addClass('dark-mode');
-      localStorage.setItem('dark_mode', true);
+      localStorage.setItem('alto_dark', true);
     }
   });
 }
