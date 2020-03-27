@@ -4,6 +4,7 @@ $(function () {
   darkMode();
   whiteLogo();
   carousel();
+  video();
   gallery();
   comment();
   author();
@@ -71,6 +72,11 @@ function carousel() {
       },
     },
   });
+}
+
+function video() {
+  'use strict';
+  $('.post-content').fitVids();
 }
 
 function gallery() {
