@@ -8,7 +8,6 @@ $(function () {
     gallery();
     comment();
     author();
-    loadInstagram();
     offCanvas();
 });
 
@@ -104,77 +103,6 @@ function author() {
     $(".author-name").on("click", function () {
         $(this).next(".author-social").toggleClass("enabled");
     });
-}
-
-function loadInstagram() {
-    "use strict";
-    var photos;
-    var feed = $(".instagram-feed");
-    var storageKey = "alto_instagram";
-
-    if (themeOptions.instagram_token != "") {
-        if (
-            localStorage.getItem(storageKey) !== null &&
-            Math.floor(Date.now() / 1000) -
-                JSON.parse(localStorage.getItem(storageKey)).timestamp <
-                300
-        ) {
-            photos = JSON.parse(localStorage.getItem(storageKey)).photos;
-            outputInstagram(photos, feed);
-        } else {
-            $.ajax({
-                url: "https://graph.instagram.com/me/media/",
-                type: "GET",
-                data: {
-                    access_token: themeOptions.instagram_token,
-                    limit: 6,
-                    fields: "media_url, permalink, username",
-                },
-                success: function (result) {
-                    photos = result.data;
-                    var cache = {
-                        photos: photos,
-                        timestamp: Math.floor(Date.now() / 1000),
-                    };
-                    localStorage.setItem(storageKey, JSON.stringify(cache));
-                    outputInstagram(photos, feed);
-                },
-            });
-        }
-    } else {
-        feed.remove();
-    }
-}
-
-function outputInstagram(photos, feed) {
-    "use strict";
-    var photo;
-    var output = "";
-
-    for (var index in photos) {
-        photo = photos[index];
-        output +=
-            '<div class="instagram-feed-item u-hover-item u-placeholder square">' +
-            '<a href="' +
-            photo.permalink +
-            '" target="_blank" rel="noopener noreferrer">' +
-            '<img class="lazyload u-object-fit" data-src="' +
-            photo.media_url +
-            '" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">' +
-            "</a>" +
-            "</div>";
-    }
-
-    if (photos.length > 0) {
-        output +=
-            '<a class="instagram-feed-username" href="https://www.instagram.com/' +
-            photos[0].username +
-            '" target="_blank" rel="noopener noreferrer"><i class="instagram-feed-icon icon icon-instagram"></i> ' +
-            photos[0].username +
-            "</a>";
-    }
-
-    feed.html(output);
 }
 
 function offCanvas() {
