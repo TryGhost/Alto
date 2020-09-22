@@ -1,19 +1,23 @@
 .related-posts {
   margin-top: 60px;
 }
+
 .related-posts .post {
   margin-bottom: 0;
 }
+
 .related-posts .post-meta-length,
 .related-posts .post-meta-tags {
   display: none;
 }
+
 .related-title {
   font-size: 13px;
   letter-spacing: 1px;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
+
 @media (max-width: 767px) {
   .related-column + .related-column .post {
     margin-top: 30px;

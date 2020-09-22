@@ -2,6 +2,7 @@
   background-color: var(--dark-mode-bg-color);
   color: var(--dark-mode-primary-text-color);
 }
+
 .dark-mode a:not(.menu-item-link):not(.post-tag):not(.post-link),
 .dark-mode h1,
 .dark-mode h2,
@@ -19,19 +20,23 @@
 .dark-mode .menu-item-link:hover {
   color: var(--white-color);
 }
+
 .dark-mode .logo-image:not(.white) {
   opacity: 0;
 }
-.dark-mode .burger:before,
-.dark-mode .burger:after,
+
+.dark-mode .burger::before,
+.dark-mode .burger::after,
 .dark-mode hr,
-.dark-mode hr:before,
-.dark-mode hr:after {
+.dark-mode hr::before,
+.dark-mode hr::after {
   background-color: var(--white-color);
 }
+
 .dark-mode .logo-image.white {
   opacity: 1;
 }
+
 .dark-mode .menu-item-link,
 .dark-mode .post-meta,
 .dark-mode .post-link.secondary,
@@ -42,24 +47,30 @@
 .dark-mode .subscribe-message {
   color: var(--dark-mode-secondary-text-color);
 }
+
 .dark-mode .post-footer,
 .dark-mode .page-number {
   border-color: var(--dark-mode-border-color);
 }
+
 .dark-mode .comment-container,
 .dark-mode .subscribe,
 .dark-mode .u-placeholder {
   background-color: var(--dark-mode-darker-bg-color);
 }
+
 .dark-mode .off-canvas {
   background-color: var(--dark-mode-bg-color);
 }
-.dark-mode .sep:after {
+
+.dark-mode .sep::after {
   background-color: var(--dark-mode-border-color);
 }
-.dark-mode .u-text-format ol li:before {
+
+.dark-mode .u-text-format ol li::before {
   font-weight: 700;
 }
+
 .dark-mode blockquote {
   border-color: var(--white-color);
 }

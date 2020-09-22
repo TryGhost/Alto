@@ -6,8 +6,9 @@
   position: relative;
   width: 30px;
 }
-.burger:before,
-.burger:after {
+
+.burger::before,
+.burger::after {
   background-color: var(--dark-gray-color);
   content: "";
   height: 2px;
@@ -15,9 +16,11 @@
   position: absolute;
   width: 12px;
 }
-.burger:before {
+
+.burger::before {
   top: 11px;
 }
-.burger:after {
+
+.burger::after {
   bottom: 11px;
 }
