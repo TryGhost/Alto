@@ -4,10 +4,12 @@
   overflow: hidden;
   position: relative;
 }
+
 .instagram-feed-item {
   flex-shrink: 0;
   width: calc(100% / 6);
 }
+
 .instagram-feed-username {
   align-items: center;
   background-color: var(--white-color);
@@ -21,12 +23,14 @@
   position: absolute;
   z-index: 10;
 }
+
 .instagram-feed-icon {
   font-size: 20px;
   margin-right: 5px;
   position: relative;
   top: 1px;
 }
+
 @media (max-width: 767px) {
   .instagram-feed-item {
     width: calc(100% / 3);

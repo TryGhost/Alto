@@ -3,7 +3,6 @@
 @import "general/grid.css";
 @import "general/button.css";
 @import "general/form.css";
-
 @import "site/header.css";
 @import "site/burger.css";
 @import "site/switch.css";
@@ -15,7 +14,6 @@
 @import "site/instagram.css";
 @import "site/footer.css";
 @import "site/error.css";
-
 @import "blog/post.css";
 @import "blog/pagination.css";
 @import "blog/single.css";
@@ -26,12 +24,10 @@
 @import "blog/featured.css";
 @import "blog/related.css";
 @import "blog/comment.css";
-
 @import "vendor/mdi.css";
 @import "vendor/lazyload.css";
 @import "vendor/slicknav.css";
 @import "vendor/owl.css";
-
 @import "misc/width.css";
 @import "misc/utilities.css";
 @import "misc/dark.css";

@@ -3,14 +3,17 @@
   display: flex;
   margin: 30px 0 45px;
 }
+
 .pagination-left,
 .pagination-right {
   flex: 2;
   font-weight: 700;
 }
+
 .pagination-right {
   text-align: right;
 }
+
 .page-number {
   border: 1px solid var(--mid-gray-color);
   border-radius: 30px;

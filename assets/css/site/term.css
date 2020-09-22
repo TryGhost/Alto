@@ -5,6 +5,7 @@
   margin-bottom: 60px;
   text-align: center;
 }
+
 .term-image-container {
   border-radius: 50%;
   flex-shrink: 0;
@@ -13,16 +14,19 @@
   overflow: hidden;
   width: 70px;
 }
+
 .term-name {
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 0;
 }
+
 .term-description {
   line-height: 1.5;
   margin-top: 8px;
   max-width: 550px;
 }
+
 @media (max-width: 767px) {
   .term {
     margin-top: -30px;
