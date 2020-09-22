@@ -1,9 +1,9 @@
 {{#if @labs.subscribers}}
   <section class="subscribe kg-width-wide">
     <div class="container">
-      <h3 class="subscribe-title">{{t 'Subscribe to {blogtitle}' blogtitle=@blog.title}}</h3>
-      <p class="subscribe-message">{{t 'Get the latest posts delivered right to your inbox.'}}</p>
-      {{subscribe_form form_id="subscribe-form" form_class="subscribe-form" button_id="subscribe-button" button_class="subscribe-button" placeholder=(t 'Your email address')}}
+      <h3 class="subscribe-title">Subscribe to {{@blog.title}}</h3>
+      <p class="subscribe-message">Get the latest posts delivered right to your inbox.</p>
+      {{subscribe_form form_id="subscribe-form" form_class="subscribe-form" button_id="subscribe-button" button_class="subscribe-button" placeholder="Your email address"}}
     </div>
   </section>
 {{/if}}
