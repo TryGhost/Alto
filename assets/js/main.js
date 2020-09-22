@@ -6,7 +6,6 @@ $(function () {
     carousel();
     video();
     gallery();
-    comment();
     author();
     offCanvas();
 });
@@ -91,12 +90,6 @@ function gallery() {
         var ratio = width / height;
         container.style.flex = ratio + " 1 0%";
     });
-}
-
-function comment() {
-    if (themeOptions.disqus_shortname == "") {
-        $(".comment-container").remove();
-    }
 }
 
 function author() {
