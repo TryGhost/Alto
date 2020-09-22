@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="{{@site.lang}}">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{meta_title}}</title>
-  <link rel="stylesheet" href="{{asset "built/screen.css"}}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i,800">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{meta_title}}</title>
+    <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i,800">
 
-  {{> config}}
+    {{> config}}
 
-  <script>
-    if (localStorage.getItem('alto_dark') == 'true') {
-      document.documentElement.classList.add('dark-mode');
-    }
-  </script>
+    <script>
+        if (localStorage.getItem('alto_dark') == 'true') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
 
-  {{ghost_head}}
+    {{ghost_head}}
 </head>
+
 <body class="{{body_class}}">
-  <div class="container">
-    <div class="site">
-      {{> header}}
-      {{#is "home"}}
-        {{> featured}}
-      {{/is}}
-      <div class="site-content">
-        {{{body}}}
-      </div>
-      {{> subscribe}}
-      <div class="instagram-feed kg-width-full u-hover-wrapper"></div>
-      {{> footer}}
+    <div class="container">
+        <div class="site">
+            {{> header}}
+            {{#is "home"}}
+                {{> featured}}
+            {{/is}}
+            <div class="site-content">
+                {{{body}}}
+            </div>
+            {{> subscribe}}
+            <div class="instagram-feed kg-width-full u-hover-wrapper"></div>
+            {{> footer}}
+        </div>
     </div>
-  </div>
 
-  <div class="dimmer"></div>
+    <div class="dimmer"></div>
 
-  <div class="off-canvas">
-    <div class="canvas-close"><i class="canvas-icon icon icon-window-close"></i></div>
-    <div class="mobile-menu"></div>
-  </div>
+    <div class="off-canvas">
+        <div class="canvas-close"><i class="canvas-icon icon icon-window-close"></i></div>
+        <div class="mobile-menu"></div>
+    </div>
 
-  <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous">
-  </script>
-  <script src="{{asset "built/main.min.js"}}"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <script src="{{asset "built/main.min.js"}}"></script>
 
-  {{{block "scripts"}}}
+    {{{block "scripts"}}}
 
-  {{ghost_foot}}
+    {{ghost_foot}}
 </body>
+
 </html>
