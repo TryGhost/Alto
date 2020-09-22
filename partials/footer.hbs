@@ -1,5 +1,27 @@
 <footer class="site-footer kg-width-wide">
-    <div class="copyright"></div>
+    <div class="copyright">
+        Powered by <a href="https://ghost.org/" target="_blank">Ghost</a>
+    </div>
+
     {{> logo}}
-    <div class="footer-social"></div>
+
+    <div class="footer-social">
+        {{#if @site.facebook}}
+            <a class="footer-social-item footer-social-item-facebook" href="{{facebook_url @site.facebook}}"
+                target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="icon icon-facebook"></i>
+            </a>
+        {{/if}}
+        {{#if @site.twitter}}
+            <a class="footer-social-item footer-social-item-twitter" href="{{twitter_url @site.twitter}}"
+                target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <i class="icon icon-twitter"></i>
+            </a>
+        {{/if}}
+        <a class="footer-social-item footer-social-item-rss"
+            href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" target="_blank" rel="noopener noreferrer"
+            aria-label="RSS">
+            <i class="icon icon-rss"></i>
+        </a>
+    </div>
 </footer>
