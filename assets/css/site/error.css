@@ -1,0 +1,17 @@
+.error {
+  text-align: center;
+}
+.error-code {
+  color: var(--dark-gray-color);
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: -5px;
+}
+.error-posts {
+  margin-top: 60px;
+}
+.error-link {
+  color: var(--primary-color) !important;
+  font-weight: 700;
+}

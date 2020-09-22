@@ -1,0 +1,37 @@
+.toggle-track {
+  background-color: var(--dark-gray-color);
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  margin-left: 20px;
+  position: relative;
+  user-select: none;
+  width: 45px;
+}
+.toggle-sun,
+.toggle-moon {
+  align-items: center;
+  color: var(--white-color);
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  margin-top: 1px;
+  width: 50%;
+}
+.toggle-moon {
+  transform: translateX(1px);
+}
+.toggle-thumb {
+  background-color: var(--white-color);
+  border-radius: 50%;
+  height: 20px;
+  left: 2px;
+  position: absolute;
+  top: 2px;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  width: 20px;
+}
+.dark-mode .toggle-thumb {
+  transform: translateX(21px);
+}
