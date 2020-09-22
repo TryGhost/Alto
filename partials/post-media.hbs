@@ -1,23 +1,19 @@
 {{#if feature_image}}
-  <div class="post-media{{#unless small_image}} kg-width-wide{{/unless}}">
-    <div class="u-placeholder{{#if ratio}} {{ratio}}{{/if}}">
-      {{#if show_tag}}
-        {{#if primary_tag}}
-          <a class="post-media-tag post-tag-{{primary_tag.slug}}" href="{{primary_tag.url}}" title="{{primary_tag.name}}">{{primary_tag.name}}</a>
-        {{/if}}
-      {{/if}}
-      <a class="post-image-link" href="{{url}}">
-        <img class="post-image lazyload u-object-fit"
-          {{#if static_image}}
-            src="{{img_url feature_image size="m"}}"
-          {{else}}
-            data-srcset="{{img_url feature_image size="s"}} 400w, {{img_url feature_image size="m"}} 750w, {{img_url feature_image size="l"}} 960w"
-            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-          {{/if}}
-          data-sizes="auto"
-          alt="{{title}}"
-        >
-      </a>
+    <div class="post-media{{#unless small_image}} kg-width-wide{{/unless}}">
+        <div class="u-placeholder{{#if ratio}} {{ratio}}{{/if}}">
+            {{#if show_tag}}
+                {{#if primary_tag}}
+                    <a class="post-media-tag post-tag-{{primary_tag.slug}}" href="{{primary_tag.url}}"
+                        title="{{primary_tag.name}}">{{primary_tag.name}}</a>
+                {{/if}}
+            {{/if}}
+            <a class="post-image-link" href="{{url}}">
+                <img class="post-image lazyload u-object-fit" {{#if static_image}}
+                    src="{{img_url feature_image size="m"}}" {{else}}
+                    data-srcset="{{img_url feature_image size="s"}} 400w, {{img_url feature_image size="m"}} 750w, {{img_url feature_image size="l"}} 960w"
+                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" {{/if}}
+                    data-sizes="auto" alt="{{title}}">
+            </a>
+        </div>
     </div>
-  </div>
 {{/if}}

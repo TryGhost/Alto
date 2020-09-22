@@ -1,20 +1,20 @@
 {{!< default}}
 
 <div class="content-area">
-  <main class="site-main kg-width-normal">
-    {{#post}}
-      <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single-post">
-        {{> post-header single=true number_date=true big_title=true}}
-        {{> post-media ratio="horizontal"}}
-        <div class="post-content u-text-format">
-          {{content}}
-        </div>
-        {{> share}}
-        {{> author}}
-      </article>
-      {{> post-navigation}}
-    {{/post}}
-    {{> related}}
-    {{> disqus}}
-  </main>
+    <main class="site-main kg-width-normal">
+        {{#post}}
+            <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single-post">
+                {{> post-header single=true number_date=true big_title=true}}
+                {{> post-media ratio="horizontal"}}
+                <div class="post-content u-text-format">
+                    {{content}}
+                </div>
+                {{> share}}
+                {{> author}}
+            </article>
+            {{> post-navigation}}
+        {{/post}}
+        {{> related}}
+        {{> disqus}}
+    </main>
 </div>
