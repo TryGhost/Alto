@@ -43,8 +43,7 @@
 .dark-mode .page-number,
 .dark-mode .author-location,
 .dark-mode .author-social-item,
-.dark-mode .button-arrow-icon,
-.dark-mode .subscribe-message {
+.dark-mode .button-arrow-icon {
   color: var(--dark-mode-secondary-text-color);
 }
 
@@ -54,7 +53,6 @@
 }
 
 .dark-mode .comment-container,
-.dark-mode .subscribe,
 .dark-mode .u-placeholder {
   background-color: var(--dark-mode-darker-bg-color);
 }
