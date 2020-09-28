@@ -1,4 +1,4 @@
-var html = $("html");
+var html = $('html');
 
 $(function () {
     darkMode();
@@ -11,39 +11,39 @@ $(function () {
 });
 
 function darkMode() {
-    $(".toggle-track").on("click", function () {
-        if (html.hasClass("dark-mode")) {
-            html.removeClass("dark-mode");
-            localStorage.setItem("alto_dark", false);
+    $('.toggle-track').on('click', function () {
+        if (html.hasClass('dark-mode')) {
+            html.removeClass('dark-mode');
+            localStorage.setItem('alto_dark', false);
         } else {
-            html.addClass("dark-mode");
-            localStorage.setItem("alto_dark", true);
+            html.addClass('dark-mode');
+            localStorage.setItem('alto_dark', true);
         }
     });
 }
 
 function whiteLogo() {
-    if (themeOptions.white_logo != "") {
+    if (themeOptions.white_logo != '') {
         var whiteImage =
             '<img class="logo-image white" src="' +
             themeOptions.white_logo +
             '">';
-        $(".logo").append(whiteImage);
+        $('.logo').append(whiteImage);
     }
 }
 
 function carousel() {
-    var carousel = $(".carousel");
-    var postImage = carousel.find(".post-image");
+    var carousel = $('.carousel');
+    var postImage = carousel.find('.post-image');
     var imageHeight, nav;
 
     function moveNav() {
         imageHeight = postImage.height();
         if (!nav) {
-            nav = carousel.find(".owl-prev, .owl-next");
+            nav = carousel.find('.owl-prev, .owl-next');
         }
         nav.css({
-            top: imageHeight / 2 + "px",
+            top: imageHeight / 2 + 'px',
             opacity: 1,
         });
     }
@@ -77,74 +77,74 @@ function carousel() {
 }
 
 function video() {
-    "use strict";
-    $(".post-content").fitVids();
+    'use strict';
+    $('.post-content').fitVids();
 }
 
 function gallery() {
-    var images = document.querySelectorAll(".kg-gallery-image img");
+    var images = document.querySelectorAll('.kg-gallery-image img');
     images.forEach(function (image) {
-        var container = image.closest(".kg-gallery-image");
+        var container = image.closest('.kg-gallery-image');
         var width = image.attributes.width.value;
         var height = image.attributes.height.value;
         var ratio = width / height;
-        container.style.flex = ratio + " 1 0%";
+        container.style.flex = ratio + ' 1 0%';
     });
 }
 
 function author() {
-    $(".author-name").on("click", function () {
-        $(this).next(".author-social").toggleClass("enabled");
+    $('.author-name').on('click', function () {
+        $(this).next('.author-social').toggleClass('enabled');
     });
 }
 
 function offCanvas() {
-    var burger = jQuery(".burger");
-    var canvasClose = jQuery(".canvas-close");
+    var burger = jQuery('.burger');
+    var canvasClose = jQuery('.canvas-close');
 
-    jQuery(".nav-list").slicknav({
-        label: "",
-        prependTo: ".mobile-menu",
+    jQuery('.nav-list').slicknav({
+        label: '',
+        prependTo: '.mobile-menu',
     });
 
-    burger.on("click", function () {
-        html.toggleClass("canvas-opened");
-        html.addClass("canvas-visible");
-        dimmer("open", "medium");
+    burger.on('click', function () {
+        html.toggleClass('canvas-opened');
+        html.addClass('canvas-visible');
+        dimmer('open', 'medium');
     });
 
-    canvasClose.on("click", function () {
-        if (html.hasClass("canvas-opened")) {
-            html.removeClass("canvas-opened");
-            dimmer("close", "medium");
+    canvasClose.on('click', function () {
+        if (html.hasClass('canvas-opened')) {
+            html.removeClass('canvas-opened');
+            dimmer('close', 'medium');
         }
     });
 
-    jQuery(".dimmer").on("click", function () {
-        if (html.hasClass("canvas-opened")) {
-            html.removeClass("canvas-opened");
-            dimmer("close", "medium");
+    jQuery('.dimmer').on('click', function () {
+        if (html.hasClass('canvas-opened')) {
+            html.removeClass('canvas-opened');
+            dimmer('close', 'medium');
         }
     });
 
     jQuery(document).keyup(function (e) {
-        if (e.keyCode == 27 && html.hasClass("canvas-opened")) {
-            html.removeClass("canvas-opened");
-            dimmer("close", "medium");
+        if (e.keyCode == 27 && html.hasClass('canvas-opened')) {
+            html.removeClass('canvas-opened');
+            dimmer('close', 'medium');
         }
     });
 }
 
 function dimmer(action, speed) {
-    "use strict";
+    'use strict';
 
-    var dimmer = jQuery(".dimmer");
+    var dimmer = jQuery('.dimmer');
 
     switch (action) {
-        case "open":
+        case 'open':
             dimmer.fadeIn(speed);
             break;
-        case "close":
+        case 'close':
             dimmer.fadeOut(speed);
             break;
     }
