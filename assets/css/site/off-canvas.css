@@ -1,40 +1,40 @@
 .off-canvas {
-  background-color: var(--white-color);
-  height: 100vh;
-  left: 0;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
-  padding: 60px 0 30px;
-  position: fixed;
-  top: 0;
-  transform: translateX(-250px);
-  transition: transform 0.4s var(--animation-base);
-  width: 250px;
-  z-index: 90;
+    background-color: var(--white-color);
+    height: 100vh;
+    left: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+    padding: 60px 0 30px;
+    position: fixed;
+    top: 0;
+    transform: translateX(-250px);
+    transition: transform 0.4s var(--animation-base);
+    width: 250px;
+    z-index: 90;
 }
 
 .canvas-close {
-  color: var(--dark-gray-color);
-  cursor: pointer;
-  font-size: 16px;
-  height: 30px;
-  line-height: 30px;
-  position: absolute;
-  right: 10px;
-  text-align: center;
-  top: 10px;
-  width: 30px;
+    color: var(--dark-gray-color);
+    cursor: pointer;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+    width: 30px;
 }
 
 html:not(.canvas-visible) .off-canvas {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .canvas-opened {
-  overflow-y: hidden;
+    overflow-y: hidden;
 }
 
 .canvas-opened .off-canvas {
-  transform: translateX(0) !important;
-  visibility: visible;
+    transform: translateX(0) !important;
+    visibility: visible;
 }

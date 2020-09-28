@@ -1,9 +1,9 @@
 .comment-container {
-  background-color: var(--light-gray-color);
-  margin-top: 45px;
-  padding: 30px 0;
+    background-color: var(--light-gray-color);
+    margin-top: 45px;
+    padding: 30px 0;
 }
 
 .comment-container a {
-  color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
 }
