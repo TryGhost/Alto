@@ -1,56 +1,56 @@
 .share {
-  align-items: center;
-  display: flex;
-  line-height: 1;
-  margin-top: 30px;
+    align-items: center;
+    display: flex;
+    line-height: 1;
+    margin-top: 30px;
 }
 
 .share-item {
-  border-radius: 3px;
-  color: var(--white-color);
-  font-size: 16px;
-  height: 28px;
-  line-height: 28px;
-  text-align: center;
-  width: 28px;
+    border-radius: 3px;
+    color: var(--white-color);
+    font-size: 16px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    width: 28px;
 }
 
 .share-item + .share-item {
-  margin-left: 8px;
+    margin-left: 8px;
 }
 
 .share-facebook {
-  background-color: #3b5998;
+    background-color: #3b5998;
 }
 
 .share-twitter {
-  background-color: #1da1f2;
+    background-color: #1da1f2;
 }
 
 .share-pinterest {
-  background-color: #bd081c;
+    background-color: #bd081c;
 }
 
 .share-linkedin {
-  background-color: #0077b5;
+    background-color: #0077b5;
 }
 
 .share-reddit {
-  background-color: #ff4500;
+    background-color: #ff4500;
 }
 
 .share-tumblr {
-  background-color: #35465c;
+    background-color: #35465c;
 }
 
 .share-vk {
-  background-color: #45668e;
+    background-color: #45668e;
 }
 
 .share-pocket {
-  background-color: #ef4056;
+    background-color: #ef4056;
 }
 
 .share-telegram {
-  background-color: #08c;
+    background-color: #08c;
 }
