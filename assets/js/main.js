@@ -23,7 +23,7 @@ function darkMode() {
 }
 
 function whiteLogo() {
-    if (themeOptions.white_logo != '') {
+    if (typeof gh_white_logo != 'undefined') {
         var whiteImage =
             '<img class="logo-image white" src="' +
             themeOptions.white_logo +
