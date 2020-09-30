@@ -15,8 +15,10 @@ A clean, minimalist theme featuring a light and dark mode. Launch your online pu
 
 If your logo image isn't recognizable in dark mode, you can set a white version of the logo in `Code injection > Site Header` field.
 
-```js
-var gh_white_logo = "https://example.com/content/images/white-logo.png";
+```html
+<script>
+    var gh_white_logo = "https://example.com/content/images/white-logo.png";
+</script>
 ```
 
 # Development
