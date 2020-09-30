@@ -17,7 +17,7 @@ If your logo image isn't recognizable in dark mode, you can set a white version 
 
 ```html
 <script>
-    var gh_white_logo = "https://example.com/content/images/white-logo.png";
+    var gh_white_logo = 'https://example.com/content/images/white-logo.png';
 </script>
 ```
 
