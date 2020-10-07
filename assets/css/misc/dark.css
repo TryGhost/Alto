@@ -1,6 +1,6 @@
 .dark-mode body {
-    background-color: var(--dark-mode-bg-color);
     color: var(--dark-mode-primary-text-color);
+    background-color: var(--dark-mode-bg-color);
 }
 
 .dark-mode a:not(.menu-item-link):not(.post-tag):not(.post-link),

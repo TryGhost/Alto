@@ -9,34 +9,34 @@
 }
 
 .u-plain-list {
-    list-style-type: none;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 .u-permalink {
+    position: absolute;
+    top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    outline: none;
-    position: absolute;
-    right: 0;
-    top: 0;
     z-index: 50;
+    outline: none;
 }
 
 .u-object-fit {
-    height: 100%;
-    left: 0;
-    object-fit: cover;
     position: absolute;
     top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .u-placeholder {
-    background-color: var(--light-gray-color);
     position: relative;
     z-index: 10;
+    background-color: var(--light-gray-color);
 }
 
 .u-placeholder::before {
@@ -74,8 +74,8 @@
 .u-text-format h4,
 .u-text-format h5,
 .u-text-format h6 {
-    font-weight: 800;
     margin-top: 40px;
+    font-weight: 800;
 }
 
 .u-text-format h1 {
@@ -111,18 +111,18 @@
 }
 
 .u-text-format a {
-    color: var(--primary-color);
     position: relative;
+    color: var(--primary-color);
 }
 
 .u-text-format a::after {
-    background-color: var(--primary-color);
-    bottom: -1px;
     content: "";
-    height: 1px;
-    left: 0;
     position: absolute;
+    bottom: -1px;
+    left: 0;
     width: 100%;
+    height: 1px;
+    background-color: var(--primary-color);
 }
 
 .u-text-format ul,
@@ -132,24 +132,24 @@
 
 .u-text-format ul li,
 .u-text-format ol li {
-    line-height: 1.65;
-    margin: 15px 0;
     position: relative;
+    margin: 15px 0;
+    line-height: 1.65;
 }
 
 .u-text-format ul li::before,
 .u-text-format ol li::before {
-    background-color: var(--primary-color);
     position: absolute;
+    background-color: var(--primary-color);
 }
 
 .u-text-format ul li::before {
-    border-radius: 50%;
     content: "";
-    height: 6px;
-    left: -18px;
     top: 11px;
+    left: -18px;
     width: 6px;
+    height: 6px;
+    border-radius: 50%;
 }
 
 .u-text-format ol {
@@ -157,18 +157,18 @@
 }
 
 .u-text-format ol li::before {
-    border-radius: 50%;
-    color: var(--white-color);
     content: counter(numbered-list);
-    counter-increment: numbered-list;
-    font-size: 13px;
-    font-weight: 800;
-    height: 24px;
-    left: -34px;
-    line-height: 24px;
-    text-align: center;
     top: 2px;
+    left: -34px;
     width: 24px;
+    height: 24px;
+    color: var(--white-color);
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 800;
+    text-align: center;
+    border-radius: 50%;
+    counter-increment: numbered-list;
 }
 
 @media (max-width: 767px) {

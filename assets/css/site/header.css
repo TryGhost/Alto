@@ -4,16 +4,16 @@
 }
 
 .navbar {
-    align-items: center;
     display: flex;
-    height: 100px;
     justify-content: space-between;
+    align-items: center;
+    height: 100px;
 }
 
 .navbar-left,
 .navbar-right {
-    align-items: center;
     display: flex;
+    align-items: center;
 }
 
 .navbar-left {
@@ -21,9 +21,9 @@
 }
 
 .logo {
+    position: relative;
     display: inline-block;
     margin-right: 15px;
-    position: relative;
     vertical-align: middle;
 }
 
@@ -32,10 +32,10 @@
 }
 
 .logo-image.white {
-    left: 0;
-    opacity: 0;
     position: absolute;
     top: 0;
+    left: 0;
+    opacity: 0;
     transition: opacity 0.3s var(--animation-base);
 }
 
@@ -46,18 +46,18 @@
 
 .sep {
     display: flex;
-    height: 100%;
     margin: 0 15px;
     width: 1px;
+    height: 100%;
 }
 
 .sep::after {
-    background-color: var(--mid-gray-color);
     content: "";
-    height: 40%;
     margin: auto;
-    transition: background-color 0.5s var(--animation-base);
     width: 100%;
+    height: 40%;
+    background-color: var(--mid-gray-color);
+    transition: background-color 0.5s var(--animation-base);
 }
 
 .nav-list {
@@ -65,13 +65,13 @@
 }
 
 .menu-item {
-    backface-visibility: hidden;
+    margin: 0 20px;
     font-size: 14px;
+    line-height: 1;
     font-weight: 800;
     letter-spacing: 0.5px;
-    line-height: 1;
-    margin: 0 20px;
     transition: opacity 0.3s var(--animation-base);
+    backface-visibility: hidden;
 }
 
 .menu-item-link {
