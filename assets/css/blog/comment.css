@@ -1,7 +1,7 @@
 .comment-container {
-    background-color: var(--light-gray-color);
     margin-top: 45px;
     padding: 30px 0;
+    background-color: var(--light-gray-color);
 }
 
 .comment-container a {

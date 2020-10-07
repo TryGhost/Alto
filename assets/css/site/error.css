@@ -3,11 +3,11 @@
 }
 
 .error-code {
+    margin-bottom: -5px;
     color: var(--dark-gray-color);
     font-size: 40px;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: -5px;
 }
 
 .error-posts {

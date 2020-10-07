@@ -1,9 +1,9 @@
 .site-footer {
-    align-items: center;
     display: flex;
     justify-content: space-between;
-    line-height: 1;
+    align-items: center;
     padding: 45px 0;
+    line-height: 1;
 }
 
 .copyright,
@@ -25,9 +25,9 @@
 }
 
 .footer-social-item {
+    padding: 0 5px;
     color: var(--secondary-text-color);
     font-size: 18px;
-    padding: 0 5px;
 }
 
 @media (max-width: 767px) {
@@ -36,12 +36,12 @@
     }
 
     .copyright {
-        margin-top: 15px;
         order: 1;
+        margin-top: 15px;
     }
 
     .footer-social {
-        margin-right: 0;
         margin-top: 30px;
+        margin-right: 0;
     }
 }

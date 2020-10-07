@@ -1,21 +1,21 @@
 @media (min-width: 992px) {
     .kg-width-normal {
-        margin-left: calc(-750px / 2 + 100% / 2);
         margin-right: calc(-750px / 2 + 100% / 2);
+        margin-left: calc(-750px / 2 + 100% / 2);
         max-width: 750px;
     }
 }
 
 @media (min-width: 1200px) {
     .kg-width-wide {
-        margin-left: calc(-960px / 2 + 100% / 2);
         margin-right: calc(-960px / 2 + 100% / 2);
+        margin-left: calc(-960px / 2 + 100% / 2);
         max-width: 960px;
     }
 
     .kg-width-large {
-        margin-left: calc(-1140px / 2 + 100% / 2);
         margin-right: calc(-1140px / 2 + 100% / 2);
+        margin-left: calc(-1140px / 2 + 100% / 2);
         max-width: 1140px;
     }
 
@@ -26,8 +26,8 @@
 }
 
 .kg-width-full {
-    margin-left: calc(-100vw / 2 + 100% / 2);
     margin-right: calc(-100vw / 2 + 100% / 2);
+    margin-left: calc(-100vw / 2 + 100% / 2);
     max-width: 100vw;
 }
 

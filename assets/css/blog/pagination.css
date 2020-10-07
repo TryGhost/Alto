@@ -1,6 +1,6 @@
 .pagination {
-    align-items: center;
     display: flex;
+    align-items: center;
     margin: 30px 0 45px;
 }
 
@@ -15,11 +15,11 @@
 }
 
 .page-number {
+    padding: 16px 16px;
     border: 1px solid var(--mid-gray-color);
-    border-radius: 30px;
     color: var(--secondary-text-color);
     font-size: 13px;
-    font-weight: 700;
     line-height: 0;
-    padding: 16px 16px;
+    font-weight: 700;
+    border-radius: 30px;
 }
