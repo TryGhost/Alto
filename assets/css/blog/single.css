@@ -1,0 +1,25 @@
+.single-post {
+    margin-bottom: 60px;
+}
+
+.single-post .post-header {
+    text-align: center;
+}
+
+.single-post .post-media {
+    margin-top: 45px;
+}
+
+.single-post .post-image-link {
+    pointer-events: none;
+}
+
+.single-post .post-content {
+    line-height: 1.75;
+}
+
+@media (max-width: 767px) {
+    .single-post .post-header {
+        margin-top: -30px;
+    }
+}

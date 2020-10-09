@@ -1,17 +1,17 @@
 {{#get "posts" limit="3" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags" as |related|}}
-  {{#if related}}
-    <section class="related-posts">
-      <h3 class="related-title"><span class="text">{{t 'You might also like...'}}</span></h3>
-      <div class="row">
-        {{#foreach related}}
-          <div class="related-column col-md-4">
-            <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
-              {{> post-media small_image=true ratio="rectangle"}}
-              {{> post-header number_date=true}}
-            </article>
-          </div>
-        {{/foreach}}
-      </div>
-    </section>
-  {{/if}}
+    {{#if related}}
+        <section class="related-posts">
+            <h3 class="related-title"><span class="text">You might also like...</span></h3>
+            <div class="row">
+                {{#foreach related}}
+                    <div class="related-column col-md-4">
+                        <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
+                            {{> post-media small_image=true ratio="rectangle"}}
+                            {{> post-header number_date=true}}
+                        </article>
+                    </div>
+                {{/foreach}}
+            </div>
+        </section>
+    {{/if}}
 {{/get}}

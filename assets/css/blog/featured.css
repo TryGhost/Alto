@@ -1,0 +1,22 @@
+.featured-posts {
+    margin: 45px 0;
+}
+
+.featured-posts .post {
+    margin-bottom: 0;
+}
+
+.featured-posts .post-header,
+.featured-posts .post-title {
+    margin-bottom: 0;
+}
+
+.featured-posts .post-header {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .featured-posts {
+        margin: 0;
+    }
+}

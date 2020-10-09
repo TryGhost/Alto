@@ -1,0 +1,34 @@
+.term {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.term-image-container {
+    flex-shrink: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.term-name {
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.term-description {
+    margin-top: 8px;
+    max-width: 550px;
+    line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+    .term {
+        margin-top: -30px;
+    }
+}

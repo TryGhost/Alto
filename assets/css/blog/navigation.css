@@ -1,0 +1,18 @@
+.navigation {
+    display: flex;
+    margin-top: -15px;
+}
+
+.navigation-item {
+    flex: 1;
+}
+
+.navigation-item-link {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.navigation-next {
+    margin-left: 30px;
+    text-align: right;
+}

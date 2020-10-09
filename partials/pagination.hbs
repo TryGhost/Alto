@@ -1,13 +1,15 @@
 <nav class="pagination kg-width-wide">
-  <div class="pagination-left">
-    {{#if prev}}
-      <a class="newer-posts button-arrow button-arrow-left" href="{{page_url prev}}"><i class="button-arrow-icon icon icon-arrow-left"></i> {{t 'Newer Posts'}}</a>
-    {{/if}}
-  </div>
-  <span class="page-number hidden-xs hidden-sm">{{t 'Page {page} of {pages}' page=page pages=pages}}</span>
-  <div class="pagination-right">
-    {{#if next}}
-      <a class="older-posts button-arrow button-arrow-right" href="{{page_url next}}">{{t 'Older Posts'}} <i class="button-arrow-icon icon icon-arrow-right"></i> </a>
-    {{/if}}
-  </div>
+    <div class="pagination-left">
+        {{#if prev}}
+            <a class="newer-posts button-arrow button-arrow-left" href="{{page_url prev}}"><i
+                    class="button-arrow-icon icon icon-arrow-left"></i> Newer Posts</a>
+        {{/if}}
+    </div>
+    <span class="page-number hidden-xs hidden-sm">Page {{page}} of {{pages}}</span>
+    <div class="pagination-right">
+        {{#if next}}
+            <a class="older-posts button-arrow button-arrow-right" href="{{page_url next}}">Older Posts <i
+                    class="button-arrow-icon icon icon-arrow-right"></i> </a>
+        {{/if}}
+    </div>
 </nav>
