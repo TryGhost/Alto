@@ -86,14 +86,6 @@
     margin-top: 20px;
 }
 
-.u-text-format > [id] {
-    margin-top: 40px;
-}
-
-.u-text-format > [id] + p {
-    margin-top: 15px;
-}
-
 .u-text-format h1,
 .u-text-format h2,
 .u-text-format h3,
@@ -102,6 +94,15 @@
 .u-text-format h6 {
     margin-top: 40px;
     font-weight: 800;
+}
+
+.u-text-format h1 + p,
+.u-text-format h2 + p,
+.u-text-format h3 + p,
+.u-text-format h4 + p,
+.u-text-format h5 + p,
+.u-text-format h6 + p {
+    margin-top: 15px;
 }
 
 .u-text-format h1 {
