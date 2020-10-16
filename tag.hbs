@@ -3,7 +3,7 @@
 <div class="content-area">
     <main class="site-main">
         {{#tag}}
-            <section class="term kg-width-wide">
+            <section class="term container large">
                 {{#if feature_image}}
                     <div class="term-image-container u-placeholder">
                         <img class="term-image u-object-fit" src={{img_url feature_image size="xs"}} alt={{name}}>
@@ -15,7 +15,7 @@
                 </div>
             </section>
         {{/tag}}
-        <div class="post-feed kg-width-normal">
+        <div class="post-feed">
             {{#foreach posts}}
                 {{> "loop"}}
             {{/foreach}}
