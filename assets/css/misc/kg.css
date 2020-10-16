@@ -1,0 +1,32 @@
+.kg-image {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.kg-canvas {
+    display: grid;
+    grid-template-columns:
+        [full-start]
+        minmax(4vw, auto)
+        [wide-start]
+        minmax(auto, 105px)
+        [main-start]
+        min(750px, calc(100% - 8vw))
+        [main-end]
+        minmax(auto, 105px)
+        [wide-end]
+        minmax(4vw, auto)
+        [full-end];
+}
+
+.kg-canvas > * {
+    grid-column: main-start/main-end;
+}
+
+.kg-width-wide {
+    grid-column: wide-start/wide-end;
+}
+
+.kg-width-full {
+    grid-column: full-start/full-end;
+}

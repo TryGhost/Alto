@@ -1,12 +1,14 @@
 {{#get "posts" filter="featured:true" limit="10" include="tags" as |featured|}}
     {{#if featured}}
-        <div class="featured-posts carousel owl">
-            {{#foreach featured}}
-                <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
-                    {{> post-media static_image=true small_image=true ratio="square" show_tag=true}}
-                    {{> post-header hide_meta=true}}
-                </article>
-            {{/foreach}}
+        <div class="container">
+            <div class="featured-posts carousel owl">
+                {{#foreach featured}}
+                    <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
+                        {{> post-media static_image=true small_image=true ratio="square" show_tag=true}}
+                        {{> post-header hide_meta=true}}
+                    </article>
+                {{/foreach}}
+            </div>
         </div>
     {{/if}}
 {{/get}}

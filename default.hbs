@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i,800">
 
     <script>
         if (localStorage.getItem('alto_dark') == 'true') {
@@ -19,17 +18,15 @@
 </head>
 
 <body class="{{body_class}}">
-    <div class="container">
-        <div class="site">
-            {{> header}}
-            {{#is "home"}}
-                {{> featured}}
-            {{/is}}
-            <div class="site-content">
-                {{{body}}}
-            </div>
-            {{> footer}}
+    <div class="site">
+        {{> header}}
+        {{#is "home"}}
+            {{> featured}}
+        {{/is}}
+        <div class="site-content">
+            {{{body}}}
         </div>
+        {{> footer}}
     </div>
 
     <div class="dimmer"></div>
@@ -41,10 +38,11 @@
         <div class="mobile-menu"></div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous">
-        </script>
+    </script>
     <script src="{{asset "built/main.min.js"}}"></script>
 
     {{{block "scripts"}}}
