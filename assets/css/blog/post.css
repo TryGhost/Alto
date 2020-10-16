@@ -6,7 +6,7 @@
     margin-bottom: 20px;
 }
 
-.post-media.kg-width-wide {
+.post-media.large {
     margin-bottom: 45px;
 }
 
@@ -167,7 +167,7 @@
 }
 
 @media (max-width: 767px) {
-    .post-media.kg-width-wide {
+    .post-media.large {
         margin-bottom: 30px;
     }
 

@@ -1,12 +1,12 @@
 {{!< default}}
 
 <div class="content-area">
-    <main class="site-main kg-width-normal">
+    <main class="site-main">
         {{#post}}
             <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single-post">
                 {{> post-header single=true number_date=true big_title=true}}
                 {{> post-media ratio="horizontal"}}
-                <div class="post-content u-text-format">
+                <div class="post-content kg-canvas u-text-format">
                     {{content}}
                 </div>
                 {{> share}}

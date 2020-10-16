@@ -1,7 +1,8 @@
 .pagination {
     display: flex;
     align-items: center;
-    margin: 30px 0 45px;
+    margin-top: 30px;
+    margin-bottom: 45px;
 }
 
 .pagination-left,
