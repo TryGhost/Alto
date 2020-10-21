@@ -24,10 +24,7 @@ function darkMode() {
 
 function whiteLogo() {
     if (typeof gh_white_logo != 'undefined') {
-        var whiteImage =
-            '<img class="logo-image white" src="' +
-            themeOptions.white_logo +
-            '">';
+        var whiteImage = '<img class="logo-image white" src="' + gh_white_logo + '">';
         $('.logo').append(whiteImage);
     }
 }
