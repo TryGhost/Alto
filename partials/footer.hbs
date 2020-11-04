@@ -1,27 +1,34 @@
 <footer class="site-footer container large">
-    <div class="copyright">
-        Powered by <a href="https://ghost.org/" target="_blank">Ghost</a>
+    <div class="copyright"> 
+        <a href="https://fabio.sauna.re/privacy">Privacy</a> |
+        <a href="https://fabio.sauna.re/imprint">Imprint</a> |
+		<!-- <a href="javascript:cookieConsent.reset()">Cookie settings</a> -->
+		<a id="Cookie settings" href="">Cookie settings</a>
+		<script src="{{asset "scripts/cookie-reset.js"}}"></script>
+		
+
+<!-- <script nonce="${nonce}"> -->
+<!-- document.getElementById("Cookie settings").addEventListener("click", cookieConsentReset); -->
+
+<!-- function cookieConsentReset(){ -->
+  <!-- cookieConsent.reset(); -->
+<!-- } -->
+<!-- </script> -->
+<!-- amazing.html -->
+<!-- <script src='amazing.js'></script> -->
+<!-- <button id='amazing'>Am I amazing?</button> -->
+
+		<!-- <p id="cookiesettings" onclick="cookieFunction()">Cookie settings</p> -->
+		<!-- <script> -->
+				<!-- cookieConsent.reset() -->
+			<!-- </script> -->
+		<!-- document.getElementById("mySpecialButton").addEventListener("click", doTheThing); -->
     </div>
-
-    {{> logo}}
-
-    <div class="footer-social">
-        {{#if @site.facebook}}
-            <a class="footer-social-item footer-social-item-facebook" href="{{facebook_url @site.facebook}}"
-                target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <i class="icon icon-facebook"></i>
-            </a>
-        {{/if}}
-        {{#if @site.twitter}}
-            <a class="footer-social-item footer-social-item-twitter" href="{{twitter_url @site.twitter}}"
-                target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <i class="icon icon-twitter"></i>
-            </a>
-        {{/if}}
-        <a class="footer-social-item footer-social-item-rss"
-            href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" target="_blank" rel="noopener noreferrer"
-            aria-label="RSS">
-            <i class="icon icon-rss"></i>
-        </a>
+	<div>
+    <!-- <a class="footer-social-item" -->
+		<a href="https://fabio.sauna.re/">Fabio Sauna</a><a> © 2020 All rights reserved.</a> 
+        <!-- </a> -->
+		<!-- <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Copyright</a> -->
+		<!-- <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/images/80x15.png"/</a> -->
     </div>
 </footer>
