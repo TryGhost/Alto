@@ -1,0 +1,113 @@
+/* line 4, cookie-consent.scss */
+.cookie-consent-modal {
+  padding-top: 0;
+  position: static;
+  width: auto;
+  height: auto;
+  font-family: muli; }
+  /* line 10, cookie-consent.scss */
+  .cookie-consent-modal .modal-content-wrap {
+	position: fixed;
+    z-index: 1001;
+    bottom: 0;
+    margin: 1rem; }
+    /* line 15, cookie-consent.scss */
+    .cookie-consent-modal .modal-content-wrap.right {
+      right: 0; }
+    /* line 18, cookie-consent.scss */
+    .cookie-consent-modal .modal-content-wrap.left {
+      left: 0; }
+    /* line 21, cookie-consent.scss */
+    .cookie-consent-modal .modal-content-wrap .modal-content {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      background-color: #C1C1C1;
+      color: #123;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+      padding: 0;
+      max-width: 275px;
+      border-radius: 0.2rem; }
+      /* line 31, cookie-consent.scss */
+      .cookie-consent-modal .modal-content-wrap .modal-content .modal-header {
+        padding: 1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+        /* line 35, cookie-consent.scss */
+        .cookie-consent-modal .modal-content-wrap .modal-content .modal-header h3 {
+          color: #123;
+		  margin: 0;
+          font-size: 130%;
+          font-weight: 500;
+          position: relative;
+          top: 0.2rem; }
+      /* line 44, cookie-consent.scss */
+      .cookie-consent-modal .modal-content-wrap .modal-content .modal-body {
+        padding: 1rem 1rem;
+        line-height: 1.3; }
+        /* line 48, cookie-consent.scss */
+        .cookie-consent-modal .modal-content-wrap .modal-content .modal-body a {
+          color: #3d96df; }
+          /* line 51, cookie-consent.scss */
+          .cookie-consent-modal .modal-content-wrap .modal-content .modal-body a:hover {
+            color: #4993e4; }
+      /* line 57, cookie-consent.scss */
+      .cookie-consent-modal .modal-content-wrap .modal-content .modal-footer {
+        padding: 1rem 0.5rem 0.5rem 0.5rem; }
+        /* line 61, cookie-consent.scss */
+        .cookie-consent-modal .modal-content-wrap .modal-content .modal-footer .buttons {
+          display: flex;
+          justify-content: flex-end;
+          flex-wrap: wrap; }
+          /* line 66, cookie-consent.scss */
+          .cookie-consent-modal .modal-content-wrap .modal-content .modal-footer .buttons .btn {
+            padding: 0.7rem 1.1rem;
+            font-size: 100%;
+            cursor: pointer;
+            border: none;
+            border-radius: 0.2rem;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem; }
+            /* line 77, cookie-consent.scss */
+            .cookie-consent-modal .modal-content-wrap .modal-content .modal-footer .buttons .btn.btn-primary {
+              background-color: #49a8e4;
+              color: white; }
+              /* line 81, cookie-consent.scss */
+              .cookie-consent-modal .modal-content-wrap .modal-content .modal-footer .buttons .btn.btn-primary:hover {
+                background-color: #4993e4; }
+            /* line 87, cookie-consent.scss */
+            .cookie-consent-modal .modal-content-wrap .modal-content .modal-footer .buttons .btn.btn-secondary {
+              background-color: #49a8e4;
+              color: white; }
+              /* line 91, cookie-consent.scss */
+              .cookie-consent-modal .modal-content-wrap .modal-content .modal-footer .buttons .btn.btn-secondary:hover {
+                background-color: #4993e4; }
+  @media screen and (max-width: 620px) {
+    /* line 102, cookie-consent.scss */
+    .cookie-consent-modal .btn {
+      width: 100%; } }
+  /* line 107, cookie-consent.scss */
+  .cookie-consent-modal.block-access {
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 20vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; }
+    @media screen and (max-width: 620px) {
+      /* line 107, cookie-consent.scss */
+      .cookie-consent-modal.block-access {
+        padding-top: 0; } }
+    /* line 120, cookie-consent.scss */
+    .cookie-consent-modal.block-access .modal-content-wrap {
+      position: relative;
+      margin: 2.5% auto;
+      bottom: auto;
+      width: 95%; }
+      /* line 123, cookie-consent.scss */
+      .cookie-consent-modal.block-access .modal-content-wrap .modal-content {
+        border: none;
+        margin: 0 auto; }
+
+/*# sourceMappingURL=cookie-consent.css.map */
