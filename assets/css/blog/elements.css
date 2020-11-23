@@ -69,12 +69,11 @@
     height: 20px;
 }
 
-.kg-bookmark-author,
-.kg-bookmark-publisher {
+.kg-bookmark-metadata > span {
     color: var(--dark-gray-color);
 }
 
-.kg-bookmark-publisher::before {
+.kg-bookmark-metadata > span:nth-of-type(2)::before {
     content: "•";
     padding: 0 5px;
 }
