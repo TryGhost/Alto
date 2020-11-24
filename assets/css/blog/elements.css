@@ -69,6 +69,12 @@
     height: 20px;
 }
 
+/* These classes will be deprecated. Keep them for GScan validation. */
+.kg-bookmark-author,
+.kg-bookmark-publisher {
+    display: inline;
+}
+
 .kg-bookmark-metadata > span {
     color: var(--dark-gray-color);
 }
