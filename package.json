@@ -43,6 +43,7 @@
     "scripts": {
         "dev": "gulp",
         "test": "gscan .",
+        "test:ci": "gscan --fatal --verbose .",
         "lint": "gulp lint",
         "zip": "gulp zip"
     },
