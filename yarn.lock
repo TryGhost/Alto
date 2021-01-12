@@ -2519,7 +2519,7 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6,
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
 
-gscan@^3.6.1:
+gscan@3.6.1:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/gscan/-/gscan-3.6.1.tgz#fb8a2caae25203fd2524a0c1371f7c62ebebb052"
   integrity sha512-quWlziqqfkRptngIf8oT2SU95oNwzwAhaXtpkEEa17qIV9OOta5SKXM7JmHGN6fN+aiI2xcPIfpyt70ydu/OLA==
