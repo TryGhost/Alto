@@ -140,3 +140,11 @@
 .owl-height {
   transition: height 500ms ease-in-out;
 }
+@media (max-width: 767px) {
+  .owl .owl-prev {
+    left: 10px;
+  }
+  .owl .owl-next {
+    right: 10px;
+  }
+}
