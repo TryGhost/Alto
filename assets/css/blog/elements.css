@@ -30,6 +30,7 @@
 .kg-bookmark-container {
     display: flex;
     overflow: hidden;
+    text-decoration: none !important;
 }
 
 .kg-bookmark-container::after {
