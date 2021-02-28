@@ -9,9 +9,19 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i,800">
 
     <script>
-        if (localStorage.getItem('alto_dark') == 'true') {
-            document.documentElement.classList.add('dark-mode');
+        const updateDarkMode = () => {
+            const mode = getComputedStyle(document.documentElement).getPropertyValue('content');
+
+            if (localStorage.getItem('alto_dark') == 'true' ||
+                (mode === 'dark' && localStorage.getItem('alto_dark') === null)) {
+                document.documentElement.classList.add('dark-mode');
+            } else if(mode === 'light' && localStorage.getItem('alto_dark') === null) {
+                document.documentElement.classList.remove('dark-mode');
+            }
         }
+        updateDarkMode();
+        window.matchMedia('(prefers-color-scheme: light)').addListener(updateDarkMode);
+        window.matchMedia('(prefers-color-scheme: dark)').addListener(updateDarkMode);
     </script>
 
     {{ghost_head}}

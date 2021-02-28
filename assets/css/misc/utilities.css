@@ -209,3 +209,21 @@
         padding-bottom: 62.5%;
     }
 }
+
+html {
+    content: ""; /* (ab)using the content property */
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+    html {
+        content: "light"; /* (ab)using the content property */
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    html {
+        content: "dark"; /* (ab)using the content property */
+    }
+}
