@@ -22,6 +22,15 @@ If your logo image isn't recognizable in dark mode, you can set a white version 
 ```
 
 # Development
+### set up local env w/ ghost
+```
+npm install ghost-cli -g
+mkdir blog-local && cd blog-local
+ghost install local
+# now go to localhost and set up local ghost
+mv alto ./content/themes/ && cd ./content/themes/alto
+yarn dev
+```
 
 Styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
 

@@ -1,7 +1,7 @@
 .toggle-track {
     position: relative;
     display: flex;
-    margin-left: 20px;
+    margin: 20px;
     width: 45px;
     height: 24px;
     user-select: none;
