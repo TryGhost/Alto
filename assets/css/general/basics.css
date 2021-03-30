@@ -15,6 +15,7 @@
     --dark-mode-border-color: #495061;
     --animation-base: ease-in-out;
     --shadow-base: 0 0 5px rgba(0, 0, 0, 0.2);
+    --font-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace; /* stylelint-disable-line value-keyword-case */
 }
 
 html {
@@ -111,6 +112,24 @@ figcaption {
 
 pre {
     overflow-x: scroll;
+    padding: 16px 22px;
+    line-height: 1.5;
+    white-space: pre;
+    hyphens: none;
+    background-color: var(--light-gray-color);
+    border-radius: 5px;
+    -webkit-overflow-scrolling: touch;
+}
+
+code {
+    font-family: var(--font-mono);
+    font-size: 14px;
+}
+
+:not(pre) > code {
+    padding: 3px 4px;
+    background-color: var(--light-gray-color);
+    border-radius: 3px;
 }
 
 hr {
