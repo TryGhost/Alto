@@ -174,7 +174,7 @@
     counter-reset: numbered-list;
 }
 
-.u-text-format ol li::before {
+.u-text-format ol > li::before {
     content: counter(numbered-list);
     top: 2px;
     left: -34px;
