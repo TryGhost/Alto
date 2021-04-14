@@ -1,4 +1,4 @@
-{{#get "posts" limit="3" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags" as |related|}}
+{{#get "posts" limit="3" filter="tag:{{primary_tag.slug}}+id:-{{id}}" include="tags" as |related|}}
     {{#if related}}
         <section class="related-posts container medium">
             <h3 class="related-title"><span class="text">You might also like...</span></h3>
