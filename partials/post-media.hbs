@@ -1,5 +1,5 @@
 {{#if feature_image}}
-    <div class="post-media{{#unless small_image}} container large{{/unless}}">
+    <figure class="post-media{{#unless small_image}} container large{{/unless}}">
         <div class="u-placeholder{{#if ratio}} {{ratio}}{{/if}}">
             {{#if show_tag}}
                 {{#if primary_tag}}
@@ -15,8 +15,14 @@
                     data-srcset="{{img_url feature_image size="s"}} 400w, {{img_url feature_image size="m"}} 750w, {{img_url feature_image size="l"}} 960w, {{img_url feature_image size="xl"}} 1140w, {{img_url feature_image size="xxl"}} 1920w"
                     data-sizes="auto" src="{{img_url feature_image size="l"}}"
                     srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    {{/if}} alt="{{title}}">
+                    {{/if}} alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
             </a>
         </div>
-    </div>
+
+        {{#is "post, page"}}
+            {{#if feature_image_caption}}
+                <figcaption>{{feature_image_caption}}</figcaption>
+            {{/if}}
+        {{/is}}
+    </figure>
 {{/if}}
