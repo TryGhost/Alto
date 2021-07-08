@@ -19,10 +19,10 @@
             </a>
         </div>
 
-        {{#is "post, page"}}
+        {{#if with_caption}}
             {{#if feature_image_caption}}
                 <figcaption>{{feature_image_caption}}</figcaption>
             {{/if}}
-        {{/is}}
+        {{/if}}
     </figure>
 {{/if}}
