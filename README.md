@@ -8,7 +8,7 @@ A clean, minimalist theme featuring a light and dark mode. Launch your online pu
 
 # Instructions
 
-1. [Download this theme](https://github.com/TryGhost/Alto/archive/master.zip)
+1. [Download this theme](https://github.com/TryGhost/Alto/archive/main.zip)
 2. Log into Ghost, and go to the `Design` settings area to upload the zip file
 
 # White Logo
