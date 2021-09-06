@@ -36,8 +36,8 @@
 
 .footer-nav .menu-item {
     margin: 0 10px;
+    font-size: 14px;
     font-weight: 400;
-    letter-spacing: 0;
 }
 
 @media (max-width: 767px) {
