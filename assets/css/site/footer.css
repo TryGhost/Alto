@@ -4,7 +4,6 @@
     align-items: center;
     padding-top: 45px;
     padding-bottom: 45px;
-    line-height: 1;
 }
 
 .copyright,
@@ -31,6 +30,16 @@
     font-size: 18px;
 }
 
+.footer-nav .nav-list {
+    justify-content: center;
+}
+
+.footer-nav .menu-item {
+    margin: 0 10px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
 @media (max-width: 767px) {
     .site-footer {
         flex-direction: column;
@@ -38,11 +47,11 @@
 
     .copyright {
         order: 1;
-        margin-top: 15px;
+        margin-top: 10px;
     }
 
     .footer-social {
-        margin-top: 30px;
+        margin-top: 20px;
         margin-right: 0;
     }
 }

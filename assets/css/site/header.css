@@ -62,6 +62,7 @@
 
 .nav-list {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .menu-item {

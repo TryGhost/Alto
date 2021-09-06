@@ -3,7 +3,13 @@
         Powered by <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
     </div>
 
-    {{> logo}}
+    {{#if @site.secondary_navigation}}
+        <nav class="footer-nav">
+            {{navigation type="secondary"}}
+        </nav>
+    {{else}}
+        {{> logo}}
+    {{/if}}
 
     <div class="footer-social">
         {{#if @site.facebook}}
