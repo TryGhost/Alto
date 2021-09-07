@@ -54,6 +54,7 @@
     overflow: hidden;
     margin-top: 5px;
     color: var(--secondary-text-color);
+    font-size: 16px;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
