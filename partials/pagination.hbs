@@ -2,15 +2,15 @@
     <div class="pagination-left">
         {{#if prev}}
             <a class="newer-posts button-arrow button-arrow-left" href="{{page_url prev}}">
-                <i class="button-arrow-icon icon icon-arrow-left"></i> Newer Posts
+                <i class="button-arrow-icon icon icon-arrow-left"></i> 新しい投稿
             </a>
         {{/if}}
     </div>
-    <span class="page-number hidden-xs hidden-sm">Page {{page}} of {{pages}}</span>
+    <span class="page-number hidden-xs hidden-sm">{{page}} / {{pages}}</span>
     <div class="pagination-right">
         {{#if next}}
             <a class="older-posts button-arrow button-arrow-right" href="{{page_url next}}">
-                Older Posts <i class="button-arrow-icon icon icon-arrow-right"></i>
+                古い投稿 <i class="button-arrow-icon icon icon-arrow-right"></i>
             </a>
         {{/if}}
     </div>

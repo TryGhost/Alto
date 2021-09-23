@@ -1,7 +1,7 @@
 {{#get "posts" limit="3" filter="tag:{{primary_tag.slug}}+id:-{{id}}" include="tags" as |related|}}
     {{#if related}}
         <section class="related-posts container medium">
-            <h3 class="related-title"><span class="text">You might also like...</span></h3>
+            <h3 class="related-title"><span class="text">関連投稿</span></h3>
             <div class="row">
                 {{#foreach related}}
                     <div class="col-md-4 related-column">
