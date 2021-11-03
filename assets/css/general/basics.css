@@ -15,6 +15,8 @@
     --dark-mode-border-color: #495061;
     --animation-base: ease-in-out;
     --shadow-base: 0 0 5px rgba(0, 0, 0, 0.2);
+    --font-sans: Mulish, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
+    --font-serif: Lora, Times, serif; /* stylelint-disable-line value-keyword-case */
     --font-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace; /* stylelint-disable-line value-keyword-case */
 }
 
@@ -30,7 +32,7 @@ html {
 
 body {
     color: var(--primary-text-color);
-    font-family: Muli, sans-serif;
+    font-family: var(--font-sans);
     font-size: 16px;
     line-height: 1.65;
     text-rendering: optimizeLegibility;
@@ -54,7 +56,7 @@ h5,
 h6 {
     margin: 0 0 15px;
     color: var(--dark-gray-color);
-    line-height: 1.3;
+    line-height: 1.2;
     font-weight: 700;
 }
 
