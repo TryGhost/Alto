@@ -96,12 +96,12 @@
     font-weight: 800;
 }
 
-.has-serif-body .u-text-format h1,
-.has-serif-body .u-text-format h2,
-.has-serif-body .u-text-format h3,
-.has-serif-body .u-text-format h4,
-.has-serif-body .u-text-format h5,
-.has-serif-body .u-text-format h6 {
+.has-serif-title .u-text-format h1,
+.has-serif-title .u-text-format h2,
+.has-serif-title .u-text-format h3,
+.has-serif-title .u-text-format h4,
+.has-serif-title .u-text-format h5,
+.has-serif-title .u-text-format h6 {
     font-family: var(--font-serif);
 }
 
