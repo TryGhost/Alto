@@ -6,6 +6,10 @@
     text-align: center;
 }
 
+.single-post .post-meta {
+    margin-top: 15px;
+}
+
 .single-post .post-media {
     margin-top: 45px;
 }

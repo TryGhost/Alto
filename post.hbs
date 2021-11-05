@@ -10,12 +10,18 @@
                     {{content}}
                 </div>
                 <div class="container medium">
-                    {{> share}}
-                    {{> author}}
+                    {{#if @custom.show_share_links}}
+                        {{> share}}
+                    {{/if}}
+                    {{#if @custom.show_author}}
+                        {{> author}}
+                    {{/if}}
                 </div>
             </article>
             {{> post-navigation}}
-            {{> related}}
+            {{#if @custom.show_related_posts}}
+                {{> related}}
+            {{/if}}
             {{> comment}}
         {{/post}}
     </main>

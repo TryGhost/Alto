@@ -96,6 +96,15 @@
     font-weight: 800;
 }
 
+.has-serif-title .u-text-format h1,
+.has-serif-title .u-text-format h2,
+.has-serif-title .u-text-format h3,
+.has-serif-title .u-text-format h4,
+.has-serif-title .u-text-format h5,
+.has-serif-title .u-text-format h6 {
+    font-family: var(--font-serif);
+}
+
 .u-text-format h1 + p,
 .u-text-format h2 + p,
 .u-text-format h3 + p,
@@ -133,60 +142,15 @@
     text-transform: uppercase;
 }
 
-.u-text-format strong {
-    color: var(--dark-gray-color);
-}
-
 .u-text-format a {
     position: relative;
     color: var(--primary-color);
     text-decoration: underline;
 }
 
-.u-text-format ul,
-.u-text-format ol {
-    list-style-type: none;
-}
-
 .u-text-format ul li,
 .u-text-format ol li {
-    position: relative;
     margin: 15px 0;
-    line-height: 1.65;
-}
-
-.u-text-format ul li::before,
-.u-text-format ol li::before {
-    position: absolute;
-    background-color: var(--primary-color);
-}
-
-.u-text-format ul li::before {
-    content: "";
-    top: 11px;
-    left: -18px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-}
-
-.u-text-format ol {
-    counter-reset: numbered-list;
-}
-
-.u-text-format ol > li::before {
-    content: counter(numbered-list);
-    top: 2px;
-    left: -34px;
-    width: 24px;
-    height: 24px;
-    color: var(--white-color);
-    font-size: 13px;
-    line-height: 24px;
-    font-weight: 800;
-    text-align: center;
-    border-radius: 50%;
-    counter-increment: numbered-list;
 }
 
 .u-text-format > .kg-card,
@@ -202,6 +166,14 @@
 .u-text-format blockquote,
 .u-text-format blockquote + * {
     margin-top: 30px;
+}
+
+.has-serif-body .u-text-format > blockquote,
+.has-serif-body .u-text-format > ol,
+.has-serif-body .u-text-format > ul,
+.has-serif-body .u-text-format > dl,
+.has-serif-body .u-text-format > p {
+    font-family: var(--font-serif);
 }
 
 @media (max-width: 767px) {
