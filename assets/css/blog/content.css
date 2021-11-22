@@ -55,11 +55,11 @@ is the very first element in the post content */
 }
 
 /* Now the content typography styles */
-.gh-content h2 {
+.gh-content > h2 {
     font-size: 2.3rem;
 }
 
-.gh-content h3 {
+.gh-content > h3 {
     font-size: 2rem;
     font-weight: 600;
 }
