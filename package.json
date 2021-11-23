@@ -50,6 +50,9 @@
                 "options": ["Modern sans-serif", "Elegant serif"],
                 "default": "Modern sans-serif"
             },
+            "white_logo_for_dark_mode": {
+                "type": "image"
+            },
             "show_featured_posts": {
                 "type": "boolean",
                 "default": true,
