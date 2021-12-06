@@ -77,10 +77,10 @@ is the very first element in the post content */
     font-size: 1.7rem;
 }
 
-.kg-callout-text,
-.kg-toggle-content > ol,
-.kg-toggle-content > ul,
-.kg-toggle-content > p {
+.gh-content .kg-callout-text,
+.gh-content .kg-toggle-content > ol,
+.gh-content .kg-toggle-content > ul,
+.gh-content .kg-toggle-content > p {
     font-size: 1.6rem;
 }
 
