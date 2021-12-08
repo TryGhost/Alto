@@ -76,8 +76,13 @@ blockquote {
     margin-left: 0;
     color: var(--dark-gray-color);
     font-size: 22px;
-    line-height: 1.3;
+    line-height: 1.5;
     font-weight: 700;
+}
+
+blockquote:not([class]) {
+    padding-left: 2rem;
+    border-left: 4px solid var(--mid-gray-color);
 }
 
 blockquote strong {
