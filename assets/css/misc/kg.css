@@ -3,6 +3,13 @@
     margin-left: auto;
 }
 
+.kg-embed-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .kg-toggle-card .kg-toggle-heading-text {
     font-size: 1.8rem;
     font-weight: 700;
