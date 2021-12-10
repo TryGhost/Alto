@@ -79,3 +79,11 @@
 .dark-mode blockquote {
     border-color: var(--white-color);
 }
+
+.dark-mode button {
+    color: var(--white-color);
+}
+
+.dark-mode input[type="range"] {
+    color: var(--dark-mode-primary-text-color);
+}
