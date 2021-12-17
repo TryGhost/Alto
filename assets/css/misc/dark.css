@@ -3,7 +3,7 @@
     background-color: var(--dark-mode-bg-color);
 }
 
-.dark-mode a:not(.menu-item-link):not(.post-tag):not(.post-link),
+.dark-mode a:not(.menu-item-link):not(.post-tag):not(.post-link):not(.kg-btn):not(.kg-nft-card-container):not(.kg-product-card-button):not(.kg-header-card-button),
 .dark-mode h1,
 .dark-mode h2,
 .dark-mode h3,
@@ -60,7 +60,8 @@
 .dark-mode .comment-container,
 .dark-mode .u-placeholder,
 .dark-mode pre,
-.dark-mode :not(pre) > code {
+.dark-mode :not(pre) > code,
+.dark-mode .kg-header-card.kg-style-light {
     background-color: var(--dark-mode-darker-bg-color);
 }
 
