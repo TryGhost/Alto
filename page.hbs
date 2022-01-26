@@ -4,7 +4,7 @@
     <main class="site-main">
         {{#post}}
             <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single-post">
-                {{> post-header single=true number_date=true big_title=true}}
+                {{> post-header single=true big_title=true}}
                 {{> post-media ratio="horizontal" with_caption=true}}
                 <div class="post-content gh-content kg-canvas">
                     {{content}}
