@@ -10,13 +10,7 @@
         {{#unless hide_meta}}
             <div class="post-meta">
                 <span class="post-meta-item post-meta-date">
-                    <time datetime="{{date format="YYYY-MM-DD"}}">
-                        {{#unless number_date}}
-                            {{date published_at timeago="true"}}
-                        {{else}}
-                            {{date published_at}}
-                        {{/unless}}
-                    </time>
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
                 </span>
                 <span class="post-meta-item post-meta-length">
                     {{reading_time}}
