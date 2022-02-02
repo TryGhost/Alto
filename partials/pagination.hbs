@@ -6,7 +6,9 @@
             </a>
         {{/if}}
     </div>
-    <span class="page-number hidden-xs hidden-sm">Page {{page}} of {{pages}}</span>
+    {{#match pages "!=" 1}}
+        <span class="page-number hidden-xs hidden-sm">Page {{page}} of {{pages}}</span>
+    {{/match}}
     <div class="pagination-right">
         {{#if next}}
             <a class="older-posts button-arrow button-arrow-right" href="{{page_url next}}">
