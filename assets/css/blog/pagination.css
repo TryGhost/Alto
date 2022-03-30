@@ -15,6 +15,20 @@
     text-align: right;
 }
 
+.pagination a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.pagination-left svg {
+    margin-left: -2px;
+}
+
+.pagination-right svg {
+    margin-right: -2px;
+}
+
 .page-number {
     padding: 16px 16px;
     border: 1px solid var(--mid-gray-color);

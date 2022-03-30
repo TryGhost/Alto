@@ -1,7 +1,6 @@
 @import "general/normalize.css";
 @import "general/basics.css";
 @import "general/grid.css";
-@import "general/button.css";
 @import "general/form.css";
 @import "site/header.css";
 @import "site/burger.css";
@@ -18,11 +17,9 @@
 @import "blog/content.css";
 @import "blog/share.css";
 @import "blog/author.css";
-@import "blog/navigation.css";
 @import "blog/featured.css";
 @import "blog/related.css";
 @import "blog/comment.css";
-@import "vendor/mdi.css";
 @import "vendor/slicknav.css";
 @import "vendor/owl.css";
 @import "misc/lazyload.css";

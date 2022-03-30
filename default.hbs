@@ -48,8 +48,8 @@
 
                 <div class="navbar-right">
                     <div class="toggle-track">
-                        <div class="toggle-moon"><i class="icon icon-brightness-2"></i></div>
-                        <div class="toggle-sun"><i class="icon icon-white-balance-sunny"></i></div>
+                        <div class="toggle-moon">{{> "icons/moon"}}</div>
+                        <div class="toggle-sun">{{> "icons/sun"}}</div>
                         <div class="toggle-thumb"></div>
                     </div>
                 </div>
@@ -79,22 +79,15 @@
 
             <div class="footer-social">
                 {{#if @site.facebook}}
-                    <a class="footer-social-item footer-social-item-facebook" href="{{facebook_url @site.facebook}}"
-                        target="_blank" rel="noopener" aria-label="Facebook">
-                        <i class="icon icon-facebook"></i>
+                    <a class="footer-social-item footer-social-item-facebook" href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener" aria-label="Facebook">
+                        {{> "icons/facebook"}}
                     </a>
                 {{/if}}
                 {{#if @site.twitter}}
-                    <a class="footer-social-item footer-social-item-twitter" href="{{twitter_url @site.twitter}}"
-                        target="_blank" rel="noopener" aria-label="Twitter">
-                        <i class="icon icon-twitter"></i>
+                    <a class="footer-social-item footer-social-item-twitter" href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener" aria-label="Twitter">
+                        {{> "icons/twitter"}}
                     </a>
                 {{/if}}
-                <a class="footer-social-item footer-social-item-rss"
-                    href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" target="_blank" rel="noopener"
-                    aria-label="RSS">
-                    <i class="icon icon-rss"></i>
-                </a>
             </div>
         </footer>
     </div>

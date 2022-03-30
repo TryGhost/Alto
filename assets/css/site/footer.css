@@ -22,13 +22,14 @@
 
 .footer-social {
     margin-right: -7px;
+    font-size: 0;
     text-align: right;
 }
 
 .footer-social-item {
-    padding: 0 5px;
+    padding: 0 6px;
+    font-size: 0;
     color: var(--secondary-text-color);
-    font-size: 18px;
 }
 
 .footer-nav .nav-list {

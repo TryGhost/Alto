@@ -15,14 +15,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1px;
     width: 50%;
     color: var(--white-color);
-    font-size: 16px;
 }
 
 .toggle-moon {
     transform: translateX(1px);
+}
+
+.toggle-track svg {
+    width: 16px;
+    height: 16px;
 }
 
 .toggle-thumb {

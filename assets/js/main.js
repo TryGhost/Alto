@@ -4,7 +4,6 @@ $(function () {
     darkMode();
     carousel();
     video();
-    author();
     offCanvas();
 });
 
@@ -67,12 +66,6 @@ function carousel() {
 function video() {
     'use strict';
     $('.post-content').fitVids();
-}
-
-function author() {
-    $('.author-name').on('click', function () {
-        $(this).next('.author-social').toggleClass('enabled');
-    });
 }
 
 function offCanvas() {

@@ -5,23 +5,7 @@
         </div>
 
         <div class="author-wrapper">
-            <header class="author-header">
-                <div class="author-header-wrapper">
-                    <h4 class="author-name">{{name}}</h4>
-                    <div class="author-social">
-                        {{#if website}}
-                            <a class="author-social-item author-website" href="{{website}}" target="_blank" rel="noopener">Website</a>
-                        {{/if}}
-                        {{#if facebook}}
-                            <a class="author-social-item author-facebook" href="https://www.facebook.com/{{facebook}}" target="_blank" rel="noopener">Facebook</a>
-                        {{/if}}
-                        {{#if twitter}}
-                            <a class="author-social-item author-twitter" href="https://twitter.com/{{twitter}}" target="_blank" rel="noopener">Twitter</a>
-                        {{/if}}
-                        <a class="author-social-item author-more" href={{url}}>More posts</a>
-                    </div>
-                </div>
-            </header>
+            <h4 class="author-name"><a href="{{url}}">{{name}}</a></h4>
 
             <div class="author-bio">{{bio}}</div>
 

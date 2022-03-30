@@ -86,17 +86,10 @@
     position: relative;
     display: flex;
     align-items: center;
-    padding-left: 14px;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.3px;
     text-transform: uppercase;
-}
-
-.post-link::before {
-    position: absolute;
-    left: 0;
-    font-family: Alto, sans-serif;
 }
 
 .post-link.primary {
@@ -104,19 +97,20 @@
     font-weight: 800;
 }
 
-.post-link.primary::before {
-    content: "\e932";
-    left: -3px;
-    font-size: 14px;
-}
-
 .post-link.secondary {
-    margin-left: 15px;
-    padding-left: 17px;
+    margin-left: 16px;
 }
 
-.post-link.secondary::before {
-    content: "\e933";
+.post-link svg {
+    margin: 0 2px 0 -4px;
+    width: 16px;
+    height: 16px;
+}
+
+.post-link.secondary svg {
+    margin-right: 4px;
+    width: 12px;
+    height: 12px;
 }
 
 .post-author {
