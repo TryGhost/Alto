@@ -21,16 +21,82 @@
 
 <body class="{{body_class}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}">
     <div class="site">
-        {{> header}}
+        <header class="site-header container">
+            <div class="navbar">
+                <div class="navbar-left">
+                    <div class="burger hidden-lg hidden-xl"></div>
+
+                    <a class="logo" href="{{@site.url}}">
+                        {{#if @site.logo}}
+                            {{#if @custom.white_logo_for_dark_mode}}
+                                <img class="logo-image white" src="{{img_url @custom.white_logo_for_dark_mode}}" alt="{{@site.title}}">
+                            {{/if}}
+                            <img class="logo-image" src="{{@site.logo}}" alt="{{@site.title}}">
+                        {{else}}
+                            <span class="logo-text">{{@site.title}}</span>
+                        {{/if}}
+                    </a>
+
+                    <div class="sep hidden-xs hidden-sm hidden-sm"></div>
+
+                    {{#if @site.navigation}}
+                        <nav class="main-menu hidden-xs hidden-sm hidden-md">
+                            {{navigation}}
+                        </nav>
+                    {{/if}}
+                </div>
+
+                <div class="navbar-right">
+                    <div class="toggle-track">
+                        <div class="toggle-moon"><i class="icon icon-brightness-2"></i></div>
+                        <div class="toggle-sun"><i class="icon icon-white-balance-sunny"></i></div>
+                        <div class="toggle-thumb"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
         {{#is "home"}}
             {{#if @custom.show_featured_posts}}
                 {{> featured}}
             {{/if}}
         {{/is}}
+
         <div class="site-content">
             {{{body}}}
         </div>
-        {{> footer}}
+
+        <footer class="site-footer container large">
+            <div class="copyright">
+                Powered by <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+            </div>
+
+            {{#if @site.secondary_navigation}}
+                <nav class="footer-nav">
+                    {{navigation type="secondary"}}
+                </nav>
+            {{/if}}
+
+            <div class="footer-social">
+                {{#if @site.facebook}}
+                    <a class="footer-social-item footer-social-item-facebook" href="{{facebook_url @site.facebook}}"
+                        target="_blank" rel="noopener" aria-label="Facebook">
+                        <i class="icon icon-facebook"></i>
+                    </a>
+                {{/if}}
+                {{#if @site.twitter}}
+                    <a class="footer-social-item footer-social-item-twitter" href="{{twitter_url @site.twitter}}"
+                        target="_blank" rel="noopener" aria-label="Twitter">
+                        <i class="icon icon-twitter"></i>
+                    </a>
+                {{/if}}
+                <a class="footer-social-item footer-social-item-rss"
+                    href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" target="_blank" rel="noopener"
+                    aria-label="RSS">
+                    <i class="icon icon-rss"></i>
+                </a>
+            </div>
+        </footer>
     </div>
 
     <div class="dimmer"></div>

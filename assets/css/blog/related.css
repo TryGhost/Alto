@@ -6,9 +6,9 @@
     margin-bottom: 0;
 }
 
-.related-posts .post-meta-length,
-.related-posts .post-meta-tags {
-    display: none;
+.related-posts .post-title {
+    font-size: 16px;
+    font-weight: 700;
 }
 
 .related-title {

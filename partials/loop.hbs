@@ -1,12 +1,74 @@
 <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
-    {{> post-media ratio="horizontal"}}
+    {{#if feature_image}}
+        <figure class="post-media container large">
+            <div class="u-placeholder horizontal">
+                <a class="post-image-link" href="{{url}}">
+                    <img
+                        class="post-image u-object-fit"
+                        srcset="{{img_url feature_image size="s"}} 400w,
+                                {{img_url feature_image size="m"}} 750w,
+                                {{img_url feature_image size="l"}} 960w,
+                                {{img_url feature_image size="xl"}} 1140w,
+                                {{img_url feature_image size="xxl"}} 1920w"
+                        sizes="(min-width: 960px) 960px, 92vw"
+                        src="{{img_url feature_image size="l"}}"
+                        alt="{{title}}"
+                        loading="lazy"
+                    >
+                </a>
+            </div>
+        </figure>
+    {{/if}}
+
     <div class="container medium">
-        {{> post-header big_title=true}}
+        <header class="post-header{{#if single}} container medium{{/if}}">
+            <h2 class="post-title">
+                <a class="post-title-link" href="{{url}}">{{title}}</a>
+            </h2>
+
+            <div class="post-meta">
+                <span class="post-meta-item post-meta-date">
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
+                </span>
+
+                <span class="post-meta-item post-meta-length">
+                    {{reading_time}}
+                </span>
+
+                {{#primary_tag}}
+                    <span class="post-meta-item post-meta-tags">
+                        <a class="post-tag post-tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>
+                    </span>
+                {{/primary_tag}}
+            </div>
+        </header>
+
         {{#if excerpt}}
             <div class="post-excerpt">
                 {{excerpt words="33"}}
             </div>
         {{/if}}
-        {{> post-footer}}
+
+        <footer class="post-footer">
+            <div class="post-action">
+                <a class="post-link primary" href="{{url}}">Read Now</a>
+                <a class="post-link secondary" href="https://getpocket.com/save?url={{url absolute="true"}}" target="_blank" rel="noopener">Read Later</a>
+            </div>
+
+            <div class="post-author">
+                {{#foreach authors}}
+                    {{#if profile_image}}
+                        <a class="post-author-image-link" href="{{url}}">
+                            <img class="post-author-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}">
+                        </a>
+                    {{/if}}
+                {{/foreach}}
+
+                <div class="post-author-name hidden-xs hidden-sm">
+                    <span class="post-author-by">By: </span>
+                    {{#foreach authors}}<a class="post-author-name-link" href="{{url}}">{{name}}</a>{{/foreach}}
+                </div>
+            </div>
+        </footer>
     </div>
 </article>

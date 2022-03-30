@@ -40,6 +40,9 @@
         },
         "card_assets": true,
         "custom": {
+            "tag_order": {
+                "type": "text"
+            },
             "title_font": {
                 "type": "select",
                 "options": ["Modern sans-serif", "Elegant serif"],
@@ -57,11 +60,6 @@
                 "type": "boolean",
                 "default": true,
                 "group": "homepage"
-            },
-            "show_share_links": {
-                "type": "boolean",
-                "default": true,
-                "group": "post"
             },
             "show_author": {
                 "type": "boolean",

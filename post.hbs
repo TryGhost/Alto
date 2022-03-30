@@ -4,25 +4,89 @@
     <main class="site-main">
         {{#post}}
             <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single-post">
-                {{> post-header single=true big_title=true}}
-                {{> post-media ratio="horizontal" with_caption=true}}
+                <header class="post-header container medium">
+                    <h1 class="post-title">{{title}}</h1>
+
+                    <div class="post-meta">
+                        <span class="post-meta-item post-meta-date">
+                            <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
+                        </span>
+
+                        <span class="post-meta-item post-meta-length">
+                            {{reading_time}}
+                        </span>
+
+                        {{#primary_tag}}
+                            <span class="post-meta-item post-meta-tags">
+                                <a class="post-tag post-tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>
+                            </span>
+                        {{/primary_tag}}
+                    </div>
+                </header>
+
+                {{#if feature_image}}
+                    <figure class="post-media container large">
+                        <div class="u-placeholder horizontal">
+                            <a class="post-image-link" href="{{url}}">
+                                <img
+                                    class="post-image u-object-fit"
+                                    srcset="{{img_url feature_image size="s"}} 400w,
+                                            {{img_url feature_image size="m"}} 750w,
+                                            {{img_url feature_image size="l"}} 960w,
+                                            {{img_url feature_image size="xl"}} 1140w,
+                                            {{img_url feature_image size="xxl"}} 1920w"
+                                    sizes="(min-width: 960px) 960px, 92vw"
+                                    src="{{img_url feature_image size="l"}}"
+                                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                                    loading="lazy"
+                                >
+                            </a>
+                        </div>
+
+                        {{#if feature_image_caption}}
+                            <figcaption>{{feature_image_caption}}</figcaption>
+                        {{/if}}
+                    </figure>
+                {{/if}}
+
                 <div class="post-content gh-content kg-canvas">
                     {{content}}
                 </div>
+
                 <div class="container medium">
-                    {{#if @custom.show_share_links}}
-                        {{> share}}
-                    {{/if}}
                     {{#if @custom.show_author}}
                         {{> author}}
                     {{/if}}
                 </div>
             </article>
-            {{> post-navigation}}
+
+            <div class="navigation container medium">
+                {{#prev_post}}
+                    <div class="navigation-item navigation-previous">
+                        <a class="navigation-item-link button-arrow button-arrow-left" href="{{url}}">
+                            <i class="button-arrow-icon icon icon-arrow-left"></i> Previous Post
+                        </a>
+                    </div>
+                {{/prev_post}}
+
+                {{#next_post}}
+                    <div class="navigation-item navigation-next">
+                        <a class="navigation-item-link button-arrow button-arrow-right" href="{{url}}">
+                            Next Post <i class="button-arrow-icon icon icon-arrow-right"></i>
+                        </a>
+                    </div>
+                {{/next_post}}
+            </div>
+
             {{#if @custom.show_related_posts}}
                 {{> related}}
             {{/if}}
-            {{> comment}}
+
+            {{!-- <div class="comment-container">
+                <div class="comment container medium">
+                    If you want to embed comments, this is a good place to do it!
+                </div>
+            </div> --}}
         {{/post}}
     </main>
 </div>

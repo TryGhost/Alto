@@ -4,8 +4,29 @@
             <div class="featured-posts carousel owl">
                 {{#foreach featured}}
                     <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
-                        {{> post-media static_image=true small_image=true ratio="square" show_tag=true}}
-                        {{> post-header hide_meta=true}}
+                        {{#if feature_image}}
+                            <figure class="post-media">
+                                <div class="u-placeholder square">
+                                    {{#primary_tag}}
+                                        <a class="post-media-tag post-tag-{{slug}}" href="{{url}}">{{name}}</a>
+                                    {{/primary_tag}}
+
+                                    <a class="post-image-link" href="{{url}}">
+                                        <img
+                                            class="post-image u-object-fit"
+                                            src="{{img_url feature_image size="m"}}"
+                                            alt="{{title}}"
+                                        >
+                                    </a>
+                                </div>
+                            </figure>
+                        {{/if}}
+
+                        <header class="post-header">
+                            <h2 class="post-title">
+                                <a class="post-title-link" href="{{url}}">{{title}}</a>
+                            </h2>
+                        </header>
                     </article>
                 {{/foreach}}
             </div>
