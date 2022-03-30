@@ -2,7 +2,6 @@ var html = $('html');
 
 $(function () {
     darkMode();
-    whiteLogo();
     carousel();
     video();
     author();
@@ -19,13 +18,6 @@ function darkMode() {
             localStorage.setItem('alto_dark', true);
         }
     });
-}
-
-function whiteLogo() {
-    if (typeof gh_white_logo != 'undefined') {
-        var whiteImage = '<img class="logo-image white" src="' + gh_white_logo + '">';
-        $('.logo').append(whiteImage);
-    }
 }
 
 function carousel() {
