@@ -14,10 +14,6 @@
     margin-top: 45px;
 }
 
-.single-post .post-image-link {
-    pointer-events: none;
-}
-
 .single-post .post-content {
     font-size: 17px;
 }
