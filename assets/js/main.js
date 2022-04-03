@@ -7,6 +7,7 @@ $(function () {
     video();
     author();
     offCanvas();
+    lightbox();
 });
 
 function darkMode() {
@@ -133,4 +134,11 @@ function dimmer(action, speed) {
             dimmer.fadeOut(speed);
             break;
     }
+}
+
+function lightbox() {
+    $('.kg-image, .kg-gallery-image img').each(function() {
+        $(this).wrap("<a data-no-swup data-fslightbox href='" + this.src + "' aria-label='Click for Lightbox' />");
+    });
+    refreshFsLightbox();
 }
