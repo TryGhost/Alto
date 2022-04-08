@@ -1,38 +1,23 @@
 {{!< default}}
 
+{{#post}}
+
 <div class="content-area">
-    <main class="site-main">
-        {{#post}}
-            <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single-post">
-                <header class="post-header container medium">
-                    <h1 class="post-title">{{title}}</h1>
-                </header>
+<main class="site-main">
+    <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single-post">
 
-                {{#if feature_image}}
-                    <figure class="post-media container large">
-                        <img
-                            class="post-image"
-                            srcset="{{img_url feature_image size="s"}} 400w,
-                                    {{img_url feature_image size="m"}} 750w,
-                                    {{img_url feature_image size="l"}} 960w,
-                                    {{img_url feature_image size="xl"}} 1140w,
-                                    {{img_url feature_image size="xxl"}} 1920w"
-                            sizes="(min-width: 960px) 960px, 92vw"
-                            src="{{img_url feature_image size="l"}}"
-                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                            loading="lazy"
-                        >
+        <header class="post-header container medium">
+            <h1 class="post-title">{{title}}</h1>
+        </header>
 
-                        {{#if feature_image_caption}}
-                            <figcaption>{{feature_image_caption}}</figcaption>
-                        {{/if}}
-                    </figure>
-                {{/if}}
+        {{> "post-image"}}
 
-                <div class="post-content gh-content kg-canvas">
-                    {{content}}
-                </div>
-            </article>
-        {{/post}}
-    </main>
+        <div class="post-content gh-content kg-canvas">
+            {{content}}
+        </div>
+
+    </article>
+</main>
 </div>
+
+{{/post}}

@@ -40,9 +40,6 @@
         },
         "card_assets": true,
         "custom": {
-            "tag_order": {
-                "type": "text"
-            },
             "title_font": {
                 "type": "select",
                 "options": ["Modern sans-serif", "Elegant serif"],

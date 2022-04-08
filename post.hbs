@@ -1,70 +1,55 @@
 {{!< default}}
 
 <div class="content-area">
-    <main class="site-main">
-        {{#post}}
-            <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single-post">
-                <header class="post-header container medium">
-                    <h1 class="post-title">{{title}}</h1>
+<main class="site-main">
 
-                    <div class="post-meta">
-                        <span class="post-meta-item post-meta-date">
-                            <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
-                        </span>
+    {{#post}}
 
-                        <span class="post-meta-item post-meta-length">
-                            {{reading_time}}
-                        </span>
+    <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single-post">
+        <header class="post-header container medium">
+            <h1 class="post-title">{{title}}</h1>
 
-                        {{#primary_tag}}
-                            <span class="post-meta-item post-meta-tags">
-                                <a class="post-tag post-tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>
-                            </span>
-                        {{/primary_tag}}
-                    </div>
-                </header>
+            <div class="post-meta">
+                <span class="post-meta-item post-meta-date">
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
+                </span>
 
-                {{#if feature_image}}
-                    <figure class="post-media container large">
-                        <img
-                            class="post-image"
-                            srcset="{{img_url feature_image size="s"}} 400w,
-                                    {{img_url feature_image size="m"}} 750w,
-                                    {{img_url feature_image size="l"}} 960w,
-                                    {{img_url feature_image size="xl"}} 1140w,
-                                    {{img_url feature_image size="xxl"}} 1920w"
-                            sizes="(min-width: 960px) 960px, 92vw"
-                            src="{{img_url feature_image size="l"}}"
-                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                            loading="lazy"
-                        >
+                <span class="post-meta-item post-meta-length">
+                    {{reading_time}}
+                </span>
 
-                        {{#if feature_image_caption}}
-                            <figcaption>{{feature_image_caption}}</figcaption>
-                        {{/if}}
-                    </figure>
-                {{/if}}
+                {{#primary_tag}}
+                    <span class="post-meta-item post-meta-tags">
+                        <a class="post-tag post-tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>
+                    </span>
+                {{/primary_tag}}
+            </div>
+        </header>
 
-                <div class="post-content gh-content kg-canvas">
-                    {{content}}
-                </div>
+        {{> "post-image"}}
 
-                <div class="container medium">
-                    {{#if @custom.show_author}}
-                        {{> "author"}}
-                    {{/if}}
-                </div>
-            </article>
+        <div class="post-content gh-content kg-canvas">
+            {{content}}
+        </div>
 
-            {{#if @custom.show_related_posts}}
-                {{> "related"}}
+        <div class="container medium">
+            {{#if @custom.show_author}}
+                {{> "author"}}
             {{/if}}
+        </div>
+    </article>
 
-            {{!-- <div class="comment-container">
-                <div class="comment container medium">
-                    If you want to embed comments, this is a good place to do it!
-                </div>
-            </div> --}}
-        {{/post}}
-    </main>
+    {{!-- <div class="comment-container">
+        <div class="comment container medium">
+            If you want to embed comments, this is a good place to do it!
+        </div>
+    </div> --}}
+
+    {{#if @custom.show_related_posts}}
+        {{> "related"}}
+    {{/if}}
+
+    {{/post}}
+
+</main>
 </div>

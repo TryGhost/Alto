@@ -1,47 +1,52 @@
-{{#get "posts" limit="3" filter="tag:{{primary_tag.slug}}+id:-{{id}}" include="tags" as |related|}}
-    {{#if related}}
-        <section class="related-posts container medium">
-            <h3 class="related-title"><span class="text">You might also like...</span></h3>
-            <div class="row">
-                {{#foreach related}}
-                    <div class="col-md-4 related-column">
-                        <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
-                            {{#if feature_image}}
-                                <figure class="post-media">
-                                    <div class="u-placeholder rectangle">
-                                        <a class="post-image-link" href="{{url}}">
-                                            <img
-                                                class="post-image u-object-fit"
-                                                srcset="{{img_url feature_image size="s"}} 400w,
-                                                        {{img_url feature_image size="m"}} 750w,
-                                                        {{img_url feature_image size="l"}} 960w,
-                                                        {{img_url feature_image size="xl"}} 1140w,
-                                                        {{img_url feature_image size="xxl"}} 1920w"
-                                                sizes="(min-width: 960px) 960px, 92vw"
-                                                src="{{img_url feature_image size="l"}}"
-                                                alt="{{title}}"
-                                                loading="lazy"
-                                            >
-                                        </a>
-                                    </div>
-                                </figure>
-                            {{/if}}
+{{#get "posts" limit="3" filter="tag:{{primary_tag.slug}}+id:-{{id}}" include="tags" as |related|}}{{#if related}}
+<section class="related-posts container medium">
 
-                            <header class="post-header">
-                                <h2 class="post-title">
-                                    <a class="post-title-link" href="{{url}}">{{title}}</a>
-                                </h2>
+    <h3 class="related-title"><span class="text">You might also like...</span></h3>
 
-                                <div class="post-meta">
-                                    <span class="post-meta-item post-meta-date">
-                                        <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
-                                    </span>
-                                </div>
-                            </header>
-                        </article>
-                    </div>
-                {{/foreach}}
-            </div>
-        </section>
-    {{/if}}
-{{/get}}
+    <div class="row">
+    {{#foreach related}}
+
+        <div class="col-md-4 related-column">
+        <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
+
+            {{#if feature_image}}
+            <figure class="post-media">
+                <div class="u-placeholder rectangle">
+                    <a class="post-image-link" href="{{url}}">
+                        <img
+                            class="post-image u-object-fit"
+                            srcset="{{img_url feature_image size="s"}} 400w,
+                                    {{img_url feature_image size="m"}} 750w,
+                                    {{img_url feature_image size="l"}} 960w,
+                                    {{img_url feature_image size="xl"}} 1140w,
+                                    {{img_url feature_image size="xxl"}} 1920w"
+                            sizes="(min-width: 960px) 960px, 92vw"
+                            src="{{img_url feature_image size="l"}}"
+                            alt="{{title}}"
+                            loading="lazy"
+                        >
+                    </a>
+                </div>
+            </figure>
+            {{/if}}
+
+            <header class="post-header">
+                <h2 class="post-title">
+                    <a class="post-title-link" href="{{url}}">{{title}}</a>
+                </h2>
+
+                <div class="post-meta">
+                    <span class="post-meta-item post-meta-date">
+                        <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
+                    </span>
+                </div>
+            </header>
+
+        </article>
+        </div>
+
+    {{/foreach}}
+    </div>
+
+</section>
+{{/if}}{{/get}}

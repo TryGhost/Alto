@@ -1,20 +1,20 @@
 {{#foreach authors}}
-    <section class="author">
-        <div class="author-image-placeholder u-placeholder">
-            <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
-        </div>
+<section class="author">
 
-        <div class="author-wrapper">
-            <h4 class="author-name"><a href="{{url}}">{{name}}</a></h4>
+    <div class="author-image-placeholder u-placeholder">
+        <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
+    </div>
 
-            <div class="author-bio">{{bio}}</div>
+    <div class="author-wrapper">
+        <h4 class="author-name"><a href="{{url}}">{{name}}</a></h4>
+        <div class="author-bio">{{bio}}</div>
+        {{#if location}}
+            <div class="author-location">
+                <i class="author-location-icon icon icon-map-marker"></i>
+                {{location}}
+            </div>
+        {{/if}}
+    </div>
 
-            {{#if location}}
-                <div class="author-location">
-                    <i class="author-location-icon icon icon-map-marker"></i>
-                    {{location}}
-                </div>
-            {{/if}}
-        </div>
-    </section>
+</section>
 {{/foreach}}

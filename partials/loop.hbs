@@ -1,4 +1,5 @@
 <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
+
     {{#if feature_image}}
         <figure class="post-media container large">
             <div class="u-placeholder horizontal">
@@ -30,11 +31,9 @@
                 <span class="post-meta-item post-meta-date">
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
                 </span>
-
                 <span class="post-meta-item post-meta-length">
                     {{reading_time}}
                 </span>
-
                 {{#primary_tag}}
                     <span class="post-meta-item post-meta-tags">
                         <a class="post-tag post-tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>
@@ -75,4 +74,5 @@
             </div>
         </footer>
     </div>
+
 </article>
