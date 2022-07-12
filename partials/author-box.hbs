@@ -1,0 +1,29 @@
+<div class="gh-canvas">
+{{#foreach authors}}
+
+    <section class="author">
+
+        <div class="author-image-placeholder u-placeholder">
+            {{#if profile_image}}
+                <img class="author-image u-object-fit" src="{{img_url profile_image size="xs"}}" alt="{{name}}" loading="lazy">
+            {{else}}
+                {{> "icons/avatar"}}
+            {{/if}}
+        </div>
+
+        <div class="author-wrapper">
+            <h4 class="author-name"><a href="{{url}}">{{name}}</a></h4>
+            {{#if bio}}
+                <div class="author-bio">{{bio}}</div>
+            {{/if}}
+            {{#if location}}
+                <div class="author-location">
+                    {{location}}
+                </div>
+            {{/if}}
+        </div>
+
+    </section>
+
+{{/foreach}}
+</div>

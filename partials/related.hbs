@@ -1,0 +1,34 @@
+{{#get "posts" limit="3" filter="tag:{{primary_tag.slug}}+id:-{{id}}" include="tags" as |related|}}{{#if related}}
+<section class="related-posts gh-canvas">
+
+    <h3 class="related-title"><span class="text">You might also like...</span></h3>
+
+    <div class="related-feed">
+    {{#foreach related}}
+
+        <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
+
+            {{#if feature_image}}
+            <figure class="post-media">
+                <div class="u-placeholder rectangle">
+                    <a class="post-image-link" href="{{url}}">
+                        <img class="post-image u-object-fit" src="{{img_url feature_image size="m"}}" alt="{{title}}" loading="lazy">
+                    </a>
+                </div>
+            </figure>
+            {{/if}}
+
+            <header class="post-header">
+                <h2 class="post-title">
+                    <a class="post-title-link" href="{{url}}">{{title}}</a>
+                </h2>
+                <time class="post-meta" datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
+            </header>
+
+        </article>
+
+    {{/foreach}}
+    </div>
+
+</section>
+{{/if}}{{/get}}

@@ -1,0 +1,22 @@
+{{!< default}}
+
+{{#post}}
+
+<div class="content-area">
+<main class="site-main">
+    <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single-post">
+
+        <header class="article-header gh-canvas">
+            <h1 class="post-title">{{title}}</h1>
+            {{> "post-image"}}
+        </header>
+
+        <div class="gh-content gh-canvas">
+            {{content}}
+        </div>
+
+    </article>
+</main>
+</div>
+
+{{/post}}

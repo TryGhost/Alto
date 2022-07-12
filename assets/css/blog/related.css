@@ -1,0 +1,33 @@
+.related-posts {
+    margin-top: 80px;
+}
+
+.related-title {
+    margin-bottom: 30px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.related-posts .post {
+    margin-bottom: 0;
+}
+
+.related-posts .post-header {
+    flex-direction: column;
+}
+
+.related-posts .post-title {
+    font-size: 1.7rem;
+    letter-spacing: 0;
+}
+
+.related-posts .post-meta {
+    font-size: 1.1rem;
+}
+
+.related-feed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}

@@ -1,0 +1,23 @@
+.featured-posts {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.featured-posts .post {
+    margin-bottom: 0;
+}
+
+.featured-posts .post-header {
+    flex-direction: column;
+}
+
+.featured-posts .post-title {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+@media (max-width: 767px) {
+    .featured-posts {
+        margin: 0;
+    }
+}

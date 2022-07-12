@@ -1,0 +1,21 @@
+<div class="gh-outer">
+<nav class="pagination">
+
+    <div class="pagination-left">
+        {{#if prev}}
+            <a href="{{page_url prev}}">{{> "icons/arrow-left"}} Previous</a>
+        {{/if}}
+    </div>
+
+    {{#match pages "!=" 1}}
+        <span class="page-number hidden-xs hidden-sm">Page {{page}} of {{pages}}</span>
+    {{/match}}
+
+    <div class="pagination-right">
+        {{#if next}}
+            <a href="{{page_url next}}">Next {{> "icons/arrow-right"}}</a>
+        {{/if}}
+    </div>
+
+</nav>
+</div>

@@ -1,0 +1,82 @@
+.post {
+    margin-bottom: 100px;
+}
+
+.post-media {
+    margin-bottom: 20px;
+}
+
+.post-feed .post-media {
+    width: 100%;
+    max-width: calc(960px + var(--gap) * 2);
+    margin: 0 auto 40px;
+}
+
+.post-media-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    padding: 2px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--white-color);
+    background: var(--primary-color);
+    border-radius: 15px;
+}
+
+.post-image-link:hover {
+    opacity: 1;
+}
+
+.post-header {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+}
+
+.post-title {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+.has-serif-title :where(.post-feed, .single-post) .post-title {
+    font-family: var(--font-serif);
+}
+
+.post-meta {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--secondary-text-color);
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+}
+
+.post-meta-item + .post-meta-item::before {
+    padding: 0 4px;
+    font-family: serif;
+    content: "\02022";
+}
+
+.post-tag {
+    color: var(--primary-color);
+}
+
+.post-excerpt {
+    margin-top: 12px;
+}
+
+.has-serif-body .post-excerpt {
+    font-family: var(--font-serif);
+}
+
+@media (max-width: 767px) {
+    .post-media.large {
+        margin-bottom: 30px;
+    }
+
+    .post-feed .post-title {
+        font-size: 24px;
+    }
+}

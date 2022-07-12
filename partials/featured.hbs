@@ -1,0 +1,35 @@
+{{#get "posts" filter="featured:true" limit="10" include="tags" as |featured|}}{{#if featured}}
+<div class="gh-outer"><div class="featured-posts carousel owl gh-inner">
+
+    {{#foreach featured}}
+    <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}}">
+
+        <figure class="post-media">
+        <div class="u-placeholder square">
+            <a class="post-image-link" href="{{url}}">
+                {{#primary_tag}}
+                    <span class="post-media-tag post-tag-{{slug}}">{{name}}</span>
+                {{/primary_tag}}
+                {{#if feature_image}}
+                    <img class="post-image u-object-fit" src="{{img_url feature_image size="m"}}" alt="{{title}}">
+                {{/if}}
+            </a>
+        </div>
+        </figure>
+
+        <header class="post-header">
+            <h2 class="post-title">
+                <a class="post-title-link" href="{{url}}">{{title}}</a>
+            </h2>
+            <div class="post-meta">
+                <span class="post-meta-item post-meta-date">
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
+                </span>
+            </div>
+        </header>
+
+    </article>
+    {{/foreach}}
+
+</div></div>
+{{/if}}{{/get}}

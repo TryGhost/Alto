@@ -1,0 +1,29 @@
+{{!< default}}
+
+<div class="content-area">
+<main class="site-main">
+
+    {{#tag}}
+        <section class="term gh-outer">
+            {{#if feature_image}}
+                <div class="term-image-container u-placeholder">
+                    <img class="term-image u-object-fit" src={{img_url feature_image size="xs"}} alt={{name}}>
+                </div>
+            {{/if}}
+            <div class="term-wrapper">
+                <h1 class="term-name">{{name}}</h1>
+                <div class="term-description">{{description}}</div>
+            </div>
+        </section>
+    {{/tag}}
+
+    <div class="post-feed">
+        {{#foreach posts}}
+            {{> "loop"}}
+        {{/foreach}}
+    </div>
+
+    {{pagination}}
+
+</main>
+</div>
