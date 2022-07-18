@@ -1,25 +1,13 @@
 # Alto
 
-A clean, minimalist theme featuring a light and dark mode. Launch your online publications with flair. Completely free and fully responsive, released under the MIT license.
+A clean, minimalist [Ghost](https://github.com/TryGhost/Ghost) theme featuring a light and dark mode. Launch your online publications with flair.
 
 **Demo: https://alto.ghost.io**
-
-&nbsp;
 
 # Instructions
 
 1. [Download this theme](https://github.com/TryGhost/Alto/archive/main.zip)
 2. Log into Ghost, and go to the `Design` settings area to upload the zip file
-
-# White Logo
-
-If your logo image isn't recognizable in dark mode, you can set a white version of the logo in `Code injection > Site Header` field.
-
-```html
-<script>
-    var gh_white_logo = 'https://example.com/content/images/white-logo.png';
-</script>
-```
 
 # Development
 
@@ -30,20 +18,20 @@ Styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need 
 yarn
 
 # Run build & watch for changes
-$ yarn dev
+yarn dev
 ```
 
 Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
 
-The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
+The `zip` Gulp task packages the theme files into `dist/alto.zip`, which you can then upload to your site.
 
 ```bash
 yarn zip
 ```
 
-# PostCSS Features Used
+# Contribution
 
--   Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
+This repo is synced automatically with [TryGhost/Themes](https://github.com/TryGhost/Themes) monorepo. If you're looking to contribute, head over to the main repository [TryGhost/Themes](https://github.com/TryGhost/Themes) where our official themes are developed.
 
 # Copyright & License
 
