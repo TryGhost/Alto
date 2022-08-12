@@ -13,14 +13,11 @@
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
                 </span>
                 {{#if reading_time}}
-                    <span class="post-meta-item post-meta-length">
-                        {{reading_time}}
-                    </span>
+                    <span class="post-meta-item post-meta-length">{{reading_time}}</span>
                 {{/if}}
+                <span class="post-meta-item post-meta-comments">{{comment_count}}</span>
                 {{#primary_tag}}
-                    <span class="post-meta-item post-meta-tags">
-                        <a class="post-tag post-tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>
-                    </span>
+                    <span class="post-meta-item post-meta-tags"><a class="post-tag post-tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a></span>
                 {{/primary_tag}}
             </div>
             <h1 class="post-title">{{title}}</h1>
@@ -37,11 +34,12 @@
 
     </article>
 
-    {{!-- <div class="comment-container gh-canvas">
-        <div class="comment">
-            If you want to embed comments, this is a good place to do it!
-        </div>
-    </div> --}}
+    {{#if comments}}
+        <section class="gh-comments gh-canvas">
+            <h3 class="related-title">Comments ({{comment_count empty="0" singular="" plural=""}})</h3>
+            {{comments title="" count=false}}
+        </section>
+    {{/if}}
 
     {{#if @custom.show_related_posts}}
         {{> "related"}}

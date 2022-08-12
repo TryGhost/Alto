@@ -31,14 +31,13 @@
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at}}</time>
                 </span>
                 {{#if reading_time}}
-                    <span class="post-meta-item post-meta-length">
-                        {{reading_time}}
-                    </span>
+                    <span class="post-meta-item post-meta-length">{{reading_time}}</span>
+                {{/if}}
+                {{#if @site.comments_enabled}}
+                    {{comment_count class="post-meta-item"}}
                 {{/if}}
                 {{#primary_tag}}
-                    <span class="post-meta-item post-meta-tags">
-                        <a class="post-tag post-tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a>
-                    </span>
+                    <span class="post-meta-item post-meta-tags"><a class="post-tag post-tag-{{slug}}" href="{{url}}" title="{{name}}">{{name}}</a></span>
                 {{/primary_tag}}
             </div>
         </header>
