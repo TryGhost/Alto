@@ -1,0 +1,43 @@
+{{#foreach authors}}
+    <section class="author">
+        <div class="author-image-placeholder u-placeholder">
+            <img class="author-image lazyload u-object-fit"
+                data-srcset="{{img_url profile_image size="xs"}}"
+                src="{{img_url profile_image size="xs"}}"
+                srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                alt="{{name}}">
+        </div>
+        <div class="author-wrapper">
+            <header class="author-header">
+                <div class="author-header-wrapper">
+                    <h4 class="author-name">{{name}}</h4>
+                    <div class="author-social">
+                        {{#if website}}
+                            <a class="author-social-item author-website"
+                                href="{{website}}" target="_blank" rel="noopener">Website</a>
+                        {{/if}}
+                        {{#if facebook}}
+                            <a class="author-social-item author-facebook"
+                                href="https://www.facebook.com/{{facebook}}"
+                                target="_blank" rel="noopener">Facebook</a>
+                        {{/if}}
+                        {{#if twitter}}
+                            <a class="author-social-item author-twitter"
+                                href="https://twitter.com/{{twitter}}"
+                                target="_blank" rel="noopener">Twitter</a>
+                        {{/if}}
+                        <a class="author-social-item author-more"
+                            href={{url}}>More posts</a>
+                    </div>
+                </div>
+            </header>
+            <div class="author-bio">{{bio}}</div>
+            {{#if location}}
+                <div class="author-location">
+                    <i class="author-location-icon icon icon-map-marker"></i>
+                    {{location}}
+                </div>
+            {{/if}}
+        </div>
+    </section>
+{{/foreach}}

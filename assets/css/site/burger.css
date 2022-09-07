@@ -1,0 +1,26 @@
+.burger {
+    position: relative;
+    margin-right: 10px;
+    margin-left: -9px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.burger::before,
+.burger::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    width: 12px;
+    height: 2px;
+    background-color: var(--dark-gray-color);
+}
+
+.burger::before {
+    top: 11px;
+}
+
+.burger::after {
+    bottom: 11px;
+}

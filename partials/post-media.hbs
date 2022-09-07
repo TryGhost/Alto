@@ -1,0 +1,28 @@
+{{#if feature_image}}
+    <figure class="post-media{{#unless small_image}} container large{{/unless}}">
+        <div class="u-placeholder{{#if ratio}} {{ratio}}{{/if}}">
+            {{#if show_tag}}
+                {{#if primary_tag}}
+                    <a class="post-media-tag post-tag-{{primary_tag.slug}}"
+                        href="{{primary_tag.url}}"
+                        title="{{primary_tag.name}}">{{primary_tag.name}}</a>
+                {{/if}}
+            {{/if}}
+            <a class="post-image-link" href="{{url}}">
+                <img class="post-image lazyload u-object-fit"
+                    {{#if static_image}}
+                    src="{{img_url feature_image size="m"}}" {{else}}
+                    data-srcset="{{img_url feature_image size="s"}} 400w, {{img_url feature_image size="m"}} 750w, {{img_url feature_image size="l"}} 960w, {{img_url feature_image size="xl"}} 1140w, {{img_url feature_image size="xxl"}} 1920w"
+                    data-sizes="auto" src="{{img_url feature_image size="l"}}"
+                    srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    {{/if}} alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+            </a>
+        </div>
+
+        {{#if with_caption}}
+            {{#if feature_image_caption}}
+                <figcaption>{{feature_image_caption}}</figcaption>
+            {{/if}}
+        {{/if}}
+    </figure>
+{{/if}}
