@@ -1,8 +1,8 @@
 .owl {
     position: relative;
     z-index: 1;
-    display: none;
     width: 100%;
+    visibility: hidden;
     -webkit-tap-highlight-color: transparent;
 }
 

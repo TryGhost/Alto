@@ -43,6 +43,7 @@ function carousel() {
         ],
         onInitialized: function () {
             moveNav();
+            carousel.css('visibility', 'visible');
         },
         onResized: function () {
             moveNav();

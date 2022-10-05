@@ -1,10 +1,16 @@
 .featured-posts {
+    min-height: 400px;
     margin-top: 48px;
     margin-bottom: 48px;
 }
 
 .featured-posts .post {
+    display: none;
     margin-bottom: 0;
+}
+
+.featured-posts.owl-loaded .post {
+    display: block;
 }
 
 .featured-posts .post-header {
