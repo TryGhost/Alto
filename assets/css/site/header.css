@@ -1,15 +1,8 @@
 .gh-head-logo {
-    position: relative;
     font-weight: 800;
 }
 
-.gh-head-logo img:nth-child(2) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-}
-
-.gh-head-menu {
+.gh-head-menu,
+.gh-head-actions {
     font-weight: 600;
 }
