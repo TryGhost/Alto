@@ -17,6 +17,7 @@
         "theme",
         "ghost-theme"
     ],
+    "docs": "https://alto.ghost.io/about/",
     "config": {
         "posts_per_page": 5,
         "image_sizes": {
