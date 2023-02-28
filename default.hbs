@@ -1,17 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{@site.locale}}">
+<html lang="{{@site.locale}}"{{#match @custom.color_scheme "Dark"}} class="dark-mode"{{/match}}>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
-
-    <script>
-        if (localStorage.getItem('alto_dark') == 'true') {
-            document.documentElement.classList.add('dark-mode');
-        }
-    </script>
 
     {{ghost_head}}
 </head>

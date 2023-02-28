@@ -63,6 +63,14 @@
                 ],
                 "default": "Modern sans-serif"
             },
+            "color_scheme": {
+                "type": "select",
+                "options": [
+                    "Light",
+                    "Dark"
+                ],
+                "default": "Light"
+            },
             "white_logo_for_dark_mode": {
                 "type": "image"
             },
