@@ -71,7 +71,7 @@
     font-family: var(--font-serif);
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .post-media.large {
         margin-bottom: 30px;
     }

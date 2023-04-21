@@ -171,7 +171,7 @@
     transition: height 500ms ease-in-out;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .owl .owl-prev {
         left: 10px;
     }

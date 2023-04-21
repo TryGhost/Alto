@@ -29,7 +29,7 @@
     font-size: 17px;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .single-post .post-header {
         margin-top: -30px;
     }

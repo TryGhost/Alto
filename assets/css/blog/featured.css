@@ -22,7 +22,7 @@
     line-height: 1.2;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .featured-posts {
         margin-top: 24px;
         margin-bottom: 0;

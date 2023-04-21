@@ -26,7 +26,7 @@
     line-height: 1.5;
 }
 
-@media (max-width: 767px) {
+@media (width <= 767px) {
     .term {
         margin-top: -30px;
     }
