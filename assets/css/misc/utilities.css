@@ -30,37 +30,37 @@
     padding-bottom: 100%;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
     .u-placeholder.horizontal::before {
         padding-bottom: 62.5%;
     }
 }
 
-@media (width <= 575px) {
+@media (max-width: 575px) {
     .hidden-xs {
         display: none !important;
     }
 }
 
-@media (width >= 576px) and (width <= 767px) {
+@media (min-width: 576px) and (max-width: 767px) {
     .hidden-sm {
         display: none !important;
     }
 }
 
-@media (width >= 768px) and (width <= 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
     .hidden-md {
         display: none !important;
     }
 }
 
-@media (width >= 992px) and (width <= 1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
     .hidden-lg {
         display: none !important;
     }
 }
 
-@media (width >= 1200px) {
+@media (min-width: 1200px) {
     .hidden-xl {
         display: none !important;
     }
