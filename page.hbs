@@ -6,10 +6,12 @@
 <main class="site-main">
     <article class="{{post_class}}{{#unless feature_image}} no-image{{/unless}} single-post">
 
-        <header class="article-header gh-canvas">
-            <h1 class="post-title">{{title}}</h1>
-            {{> "post-image"}}
-        </header>
+        {{#match @page.show_title_and_feature_image}}
+            <header class="article-header gh-canvas">
+                <h1 class="post-title">{{title}}</h1>
+                {{> "post-image"}}
+            </header>
+        {{/match}}
 
         <div class="gh-content gh-canvas">
             {{content}}

@@ -1,9 +1,13 @@
 .single-post {
-    margin-bottom: 60px;
+    margin-bottom: 0;
 }
 
 .single-post .article-header {
     text-align: center;
+}
+
+.page-template .single-post .article-header {
+    margin-top: 60px;
 }
 
 .single-post .post-title {
