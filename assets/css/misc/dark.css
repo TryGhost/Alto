@@ -32,6 +32,10 @@
     opacity: 1;
 }
 
+.dark-mode .gh-head-actions {
+    background-color: transparent !important;
+}
+
 .dark-mode .gh-burger::before,
 .dark-mode .gh-burger::after,
 .dark-mode hr,
