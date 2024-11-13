@@ -92,3 +92,14 @@
 .dark-mode input[type="range"] {
     color: var(--dark-mode-primary-text-color);
 }
+
+.dark-mode .kg-bookmark-card a.kg-bookmark-container,
+.dark-mode .kg-bookmark-card a.kg-bookmark-container:hover,
+.dark-mode .kg-file-card-container,
+.dark-mode .kg-file-card-container:hover,
+.dark-mode .kg-audio-card,
+.dark-mode .kg-product-card-container {
+    background-color: var(--dark-mode-bg-color) !important;
+    color: var(--white-color) !important;
+    opacity: 1;
+}
