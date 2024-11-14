@@ -42,8 +42,8 @@
     word-break: break-word;
 }
 
-.has-serif-title :where(.post-feed, .single-post) .post-title {
-    font-family: var(--font-serif);
+.has-serif-title:not([class*=" gh-font-heading"]):not([class^="gh-font-heading"]) :where(.post-feed, .single-post) .post-title {
+    font-family: var(--gh-font-heading, var(--font-serif));
 }
 
 .post-meta {
@@ -69,8 +69,8 @@
     word-break: break-word;
 }
 
-.has-serif-body .post-excerpt {
-    font-family: var(--font-serif);
+.has-serif-body:not([class*=" gh-font-body"]):not([class^="gh-font-body"]) .post-excerpt {
+    font-family: var(--gh-font-body, var(--font-serif));
 }
 
 @media (max-width: 767px) {
