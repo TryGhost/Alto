@@ -31,7 +31,7 @@
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at format="DD MMM YYYY"}}</time>
                 </span>
                 {{#if reading_time}}
-                    <span class="post-meta-item post-meta-length">{{reading_time}}</span>
+                    <span class="post-meta-item post-meta-length">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
                 {{/if}}
                 {{#if @site.comments_enabled}}
                     {{comment_count class="post-meta-item"}}

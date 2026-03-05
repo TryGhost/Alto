@@ -3,17 +3,17 @@
 
     <div class="pagination-left">
         {{#if prev}}
-            <a href="{{page_url prev}}">{{> "icons/arrow-left"}} Previous</a>
+            <a href="{{page_url prev}}">{{> "icons/arrow-left"}} {{t "Previous"}}</a>
         {{/if}}
     </div>
 
     {{#match pages "!=" 1}}
-        <span class="page-number hidden-xs hidden-sm">Page {{page}} of {{pages}}</span>
+        <span class="page-number hidden-xs hidden-sm">{{t "Page {page} of {totalPages}" page=page totalPages=pages}}</span>
     {{/match}}
 
     <div class="pagination-right">
         {{#if next}}
-            <a href="{{page_url next}}">Next {{> "icons/arrow-right"}}</a>
+            <a href="{{page_url next}}">{{t "Next"}} {{> "icons/arrow-right"}}</a>
         {{/if}}
     </div>
 
