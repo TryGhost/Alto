@@ -44,7 +44,11 @@
         "custom": {
             "navigation_layout": {
                 "type": "select",
-                "options": ["Logo on the left", "Logo in the middle", "Stacked"],
+                "options": [
+                    "Logo on the left",
+                    "Logo in the middle",
+                    "Stacked"
+                ],
                 "default": "Logo on the left"
             },
             "title_font": {
@@ -98,6 +102,7 @@
     },
     "devDependencies": {
         "@tryghost/shared-theme-assets": "2.5.2",
+        "@tryghost/theme-translations": "^0.0.9",
         "autoprefixer": "10.4.27",
         "beeper": "2.1.0",
         "cssnano": "7.1.3",
