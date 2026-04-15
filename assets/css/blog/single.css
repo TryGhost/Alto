@@ -33,6 +33,10 @@
     font-size: 17px;
 }
 
+.single-post .gh-meta-share {
+    margin-top: 24px;
+}
+
 @media (max-width: 767px) {
     .single-post .post-header {
         margin-top: -30px;
