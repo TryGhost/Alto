@@ -1,5 +1,8 @@
 # Alto
 
+> [!IMPORTANT]
+> This repo is synced automatically with the [TryGhost/Themes](https://github.com/TryGhost/Themes) monorepo. If you're looking to contribute or raise an issue, head over to the main repository [TryGhost/Themes](https://github.com/TryGhost/Themes) where our official themes are developed.
+
 A clean, minimalist [Ghost](https://github.com/TryGhost/Ghost) theme featuring a light and dark mode. Launch your online publications with flair.
 
 **Demo: https://alto.ghost.io**
@@ -28,10 +31,6 @@ The `zip` Gulp task packages the theme files into `dist/alto.zip`, which you can
 ```bash
 pnpm zip
 ```
-
-# Contribution
-
-This repo is synced automatically with [TryGhost/Themes](https://github.com/TryGhost/Themes) monorepo. If you're looking to contribute or raise an issue, head over to the main repository [TryGhost/Themes](https://github.com/TryGhost/Themes) where our official themes are developed.
 
 ## Theme translations
 
